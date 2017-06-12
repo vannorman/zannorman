@@ -3,7 +3,7 @@ from django.conf.urls import patterns, url
 import zannorman.zanchat
 import zannorman.views
 
-urlpatterns = patterns('',
+urlpatterns = [
     # Examples:
     # url(r'^$', 'zannorman.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
@@ -13,4 +13,4 @@ urlpatterns = patterns('',
 	url(r'^$', zannorman.views.home),
 
 	url(r'^myuservoice/report/$', zannorman.zanchat.report),
-)
+]
