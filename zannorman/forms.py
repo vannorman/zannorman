@@ -14,14 +14,7 @@ from django.core.validators import RegexValidator
 alphanumeric = RegexValidator(r'^[_\s0-9a-zA-Z]*$', 'Only alphanumeric characters are allowed.')
 
 # from https://djangosnippets.org/snippets/1956/
-class HorizontalRadioRenderer(forms.RadioSelect.renderer):
-	"""renders horizontal radio buttons.
-	found here:
-	https://wikis.utexas.edu/display/~bm6432/Django-Modifying+RadioSelect+Widget+to+have+horizontal+buttons
-	"""
-
-	def render(self):
-		return mark_safe(u'\n'.join([u'%s\n' % w for w in self]))
+# class HorizontalRadioRenderer(forms.RadioSelect.renderer):
 
 class ZanChatForm(forms.Form):
 	name = forms.CharField(max_length=100, required = True, label="Your name")
