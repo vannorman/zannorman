@@ -11,10 +11,6 @@ import datetime
 
 
 
-class UserProfile(models.Model):  
-	user = models.OneToOneField(User, related_name="profile")
-	def __str__(self):  
-		return "%s's profile" % self.user
 
 class ZanChatReport(models.Model):
 	user = models.ForeignKey(User, null=True, blank=True)
