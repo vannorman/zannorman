@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import *
 
 import zannorman.zanchat
 import zannorman.views
@@ -8,7 +8,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'zannorman.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
 
 
 	url(r'^$', zannorman.views.home),
