@@ -1,6 +1,9 @@
 {% load static %}
-
+	<head>
+	
+	<meta name="google-site-verification" content="KPrCTIkFg3RCIWPoYvQO3QBnFcEqKflrEQI_6ztrwzE" />
 	{% block styles %}
+	
 		<link rel='stylesheet' href="/static/css/home.css"|add:version|safe %} type='text/css'>
 		<link rel='stylesheet' href='{% static "css/zanchat.css" %}' type='text/css'>
 
@@ -11,7 +14,8 @@
 		<script src='{% static "js/jquery-1.11.0.min.js" %}'></script>
 		<script src='{% static "js/home.js" %}'></script>
 	{% endblock %}
-
+	</head>
+<body>
 <div id="zanchat">
 
 	<div id="muvIcon" class="transitionAll">
@@ -73,4 +77,4 @@
 	</div>
 </div>
 
-
+</body>
