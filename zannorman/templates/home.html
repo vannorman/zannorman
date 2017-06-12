@@ -1,0 +1,72 @@
+{% load static %}
+
+	{% block styles %}
+		<link rel='stylesheet' href="/static/css/home.css"|add:version|safe %} type='text/css'>
+		<link rel='stylesheet' href='{% static "css/zanchat.css" %}' type='text/css'>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,400,800" rel="stylesheet">
+	{% endblock %}
+
+	{% block scripts %}
+		<script src='{% static "js/jquery-1.11.0.min.js" %}'></script>
+		<script src='{% static "js/home.js" %}'></script>
+	{% endblock %}
+
+<div id="zanchat">
+
+	<div id="muvIcon" class="transitionAll">
+		CHAT WITH ME!
+	</div>
+	<div id="muvWindow" class="rounded20">
+		<div id="muvWindowInner">
+			<form id="muvForm" method=POST action="/myuservoice/report">
+					{% csrf_token %}
+					{{ zan_chat_form }}
+					<div id="inputs">
+						<a id="muvSubmit" href="javascript:void(0)" class="button rounded20 pureWhiteButton" >SUBMIT</a>
+					</div>
+				</form>
+			</div>
+	
+		</div>
+	</div>
+
+</div>
+
+<div id="container">
+	<div id="title">
+		<h1> Charlie Zannorman</h1>
+	</div>
+	<div id="tabs">
+		<ul>
+			<li id="tabButtonAbout">About</li>
+			<li id="tabButtonPortfolio">Portfolio</li>
+			<li id="tabButtonContact">Contact</li>
+		</ul>
+		<div id="tabAbout">
+			<p> Hello world! I am a software developer and experience designer, and I love making 3-D interactive applications &#8211 including platformer games, data visualization, and virtual reality simulations.<p>
+		</div>
+		<div id="tabPortfolio">
+			Dis mah unfinished portfolio.
+			<ul>
+				{% for item in portfolio %}
+					<li>
+						<h1> {{ item.title }}</h1>
+						<div class="description">{{ item.description }}</div>
+
+						<ul>
+							{% for image in item.images %}
+							<li><div class='img' style='background-image:url("{% static "img/grid/skycastle.jpg"  %}");'></div></li>
+							{% endfor %}
+						</ul>
+				{% endfor %}
+			</ul>
+		</div>
+		<div id="tabContact">
+			Contact me charlie@zannorman.com
+		</div>
+
+	</div>
+</div>
+
+

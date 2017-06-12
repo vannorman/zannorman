@@ -1,0 +1,47 @@
+* {
+font-family: 'Open Sans', sans-serif;
+}
+
+#container {
+	padding-top:100px;
+}
+
+#title {
+	margin: 0 auto;
+	text-align:center;
+	width:960px;
+	font-weight:200;
+}
+
+#about {
+	margin: 0 auto;
+	text-align:justify;
+	width:630px;
+
+}
+
+
+#tabs {
+	position:relative;
+}
+#tabs >  ul {
+	text-align:center;
+}
+
+#tabs > ul > li {
+	margin: 0 auto;
+	width:120px;
+	outline:1px dotted blue;
+	display:inline-block;
+	transition:all .3s;
+}
+#tabs > ul > li:hover {
+	background-color: #ccc;
+	cursor:pointer;	
+}
+#tabAbout, #tabPortfolio, #tabContact {
+	position:absolute; top:20px; left:0;
+}
+#tabPortfolio, #tabContact {
+	display:none;
+}
