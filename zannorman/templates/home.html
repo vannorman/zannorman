@@ -1,5 +1,6 @@
 {% load static %}
 	<head>
+		<title> Zannorman Inc </title>
 	
 	<meta name="google-site-verification" content="KPrCTIkFg3RCIWPoYvQO3QBnFcEqKflrEQI_6ztrwzE" />
 	{% block styles %}
@@ -13,29 +14,33 @@
 	{% block scripts %}
 		<script src='{% static "js/jquery-1.11.0.min.js" %}'></script>
 		<script src='{% static "js/home.js" %}'></script>
+		<script src='{% static "js/zanchat.js" %}'></script>
 	{% endblock %}
 	</head>
 <body>
 <div id="zanchat">
+	<div id="muvOverlay">
+	</div>
 
 	<div id="muvIcon" class="transitionAll">
 		CHAT WITH ME!
 	</div>
 	<div id="muvWindow" class="rounded20">
-		<div id="muvWindowInner">
-			<form id="muvForm" method=POST action="/myuservoice/report">
-					{% csrf_token %}
-					{{ zan_chat_form }}
-					<div id="inputs">
-						<a id="muvSubmit" href="javascript:void(0)" class="button rounded20 pureWhiteButton" >SUBMIT</a>
-					</div>
+			<div id="muvWindowInner">
+				<form id="muvForm" method=POST action="/myuservoice/report">
+						{% csrf_token %}
+						{{ zan_chat_form }}
+						<div id="inputs">
+							<a id="muvSubmit" href="javascript:void(0)" class="button rounded20 pureWhiteButton" >SUBMIT</a>
+						</div>
 				</form>
 			</div>
-	
+			{% for message in messages %}
+				{{ message.username }} says " {{ message.message }}" at {{ message.created_time }}
+			{% endfor %}
 		</div>
-	</div>
-
 </div>
+
 
 <div id="container">
 	<div id="title">
@@ -51,7 +56,9 @@
 
 			<!-- tabs content begins here -->
 			<div id="tabAbout" class='tab'>
-				<p> Hello world! I am a software developer and experience designer, and I love making 3-D interactive applications &#8211 including platformer games, data visualization, and virtual reality simulations.<p>
+				<p> Hello world! I am a software developer, tool maker, and simulation designer, and I love making 3-D interactive applications &#8211 including platformer games, data visualization, and virtual reality simulations.</p>
+				<p>	I call 'em like I see 'em, and I prefer to get straight to the point with as little politics as possible. I have strong opinions, weakly held, and when working I am most interested in pushing the project forwards to a solid release. </p>
+
 			</div>
 			<div id="tabPortfolio" class='tab'>
 				Dis mah unfinished portfolio.

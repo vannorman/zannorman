@@ -80,6 +80,7 @@ def renderWithNav(request, template, obj = None, cookies = None):
 	obj["csrf"] = get_or_create_csrf_token(request)
 	obj["version"] = timezone.now()
 	obj["zan_chat_form"] = ZanChatForm()
+	obj["messages"] = ZanChatReport.objects.all()
 	response = render(request, template, obj)
 	return response
 

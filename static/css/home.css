@@ -2,8 +2,16 @@
 font-family: 'Open Sans', sans-serif;
 }
 
+body {
+	background-image:url('/static/img/citybg.jpg');
+	background-size:cover;
+ background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
 #container {
 	padding-top:100px;
+	height:100%;
 }
 
 #title {
@@ -22,6 +30,9 @@ font-family: 'Open Sans', sans-serif;
 
 
 #tabs {
+	height:100%;
+	width:960px;
+	margin: 0 auto;
 	z-index:99;
 	position:relative;
 }
@@ -33,10 +44,10 @@ font-family: 'Open Sans', sans-serif;
 #tabs > ul > li {
 	margin: 0 auto;
 	width:120px;
-	border:1px solid #bbb;
-	border-bottom:none;
+	border:1px solid #c7c7c7;
+	border-bottom:0;
 	display:inline-block;
-	background-color: #a7a7a7;
+	background-color: rgba(150,150,150,.6);
 	padding: 8px 0 5px 0;
 	font-size:18px;
 	
@@ -52,8 +63,7 @@ font-family: 'Open Sans', sans-serif;
 }
 
 #tabs > ul > .selected {
-	background-color:white;
-	border-bottom-color:white;	
+	background-color:rgba(255,255,255,0.6);
 }
 
 #tabs > ul > li:hover {
@@ -62,16 +72,19 @@ font-family: 'Open Sans', sans-serif;
 }
 
 #tabsContainer {
+	background-color:rgba(255,255,255,0.6);
+	height:100%;
 	position:relative;
-	width:960px;
+	width:900px;
+	padding: 0 30px;
 	margin:0 auto;
-	top: -1px;
 	opacity:.99;
-	border-top:1px solid #bbb;
 	
 }
 #tabAbout, #tabPortfolio, #tabContact {
-	position:absolute; top:0px; left:0;
+	width:900px;
+	margin: 0 auto;
+	position:absolute; top:0px; left:30px;
 	
 }
 #tabPortfolio, #tabContact {
