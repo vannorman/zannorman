@@ -22,25 +22,57 @@ font-family: 'Open Sans', sans-serif;
 
 
 #tabs {
+	z-index:99;
 	position:relative;
 }
 #tabs >  ul {
 	text-align:center;
+	margin:0; border:0;
 }
 
 #tabs > ul > li {
 	margin: 0 auto;
 	width:120px;
-	outline:1px dotted blue;
+	border:1px solid #bbb;
+	border-bottom:none;
 	display:inline-block;
-	transition:all .3s;
-}
-#tabs > ul > li:hover {
 	background-color: #ccc;
+	padding: 8px 0 5px 0;
+	font-size:18px;
+	
+	transition:all .3s;
+	-webkit-border-top-left-radius: 18px;
+	-webkit-border-top-right-radius: 18px;
+	-moz-border-radius-topleft: 18px;
+	-moz-border-radius-topright: 18px;
+	border-top-left-radius: 18px;
+	border-top-right-radius: 18px;
+	position:relative;
+	z-index:101;
+}
+
+#tabs > ul > .selected {
+	background-color:white;
+	border-bottom-color:white;	
+}
+
+#tabs > ul > li:hover {
+	background-color:white;
 	cursor:pointer;	
 }
+
+#tabsContainer {
+	position:relative;
+	width:960px;
+	margin:0 auto;
+	top: -1px;
+	opacity:.99;
+	border-top:1px solid #bbb;
+	
+}
 #tabAbout, #tabPortfolio, #tabContact {
-	position:absolute; top:20px; left:0;
+	position:absolute; top:0px; left:0;
+	
 }
 #tabPortfolio, #tabContact {
 	display:none;
