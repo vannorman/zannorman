@@ -3,26 +3,38 @@ font-family: 'Open Sans', sans-serif;
 }
 
 body {
-	background-image:url('/static/img/citybg.jpg');
+	
 	background-size:cover;
  background-repeat: no-repeat;
     background-attachment: fixed;
 
 }
 #container {
+	position:relative;
 	padding-top:100px;
 	height:100%;
+	width:960px;
+	margin: 0 auto;
+	text-align:center;
 }
 
 #title {
-	margin: 0 auto;
+	display:inline-block;
 	text-align:center;
-	width:960px;
 	font-weight:200;
+	margin: 0 auto;	
+}
+
+#pic {
+	position:relative;
+	display:inline-block;
+	margin: 0 auto;	
+	border: 2px dotted #999;
+	width:400px;
+	height:250px;
 }
 
 #about {
-	margin: 0 auto;
 	text-align:justify;
 	width:630px;
 
@@ -30,18 +42,19 @@ body {
 
 
 #tabs {
+	text-align:left;
 	height:100%;
-	width:960px;
 	margin: 0 auto;
 	z-index:99;
 	position:relative;
 }
 #tabs >  ul {
-	text-align:center;
+	text-align:left;
 	margin:0; border:0;
 }
 
 #tabs > ul > li {
+	text-align:center;
 	margin: 0 auto;
 	width:120px;
 	border:1px solid #c7c7c7;
@@ -79,6 +92,9 @@ body {
 	padding: 0 30px;
 	margin:0 auto;
 	opacity:.99;
+	z-index:99;
+	top:-1px;
+	border-top:1px solid #ccc;
 	
 }
 #tabAbout, #tabPortfolio, #tabContact {
