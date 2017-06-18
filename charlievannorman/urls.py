@@ -1,6 +1,5 @@
 from django.conf.urls import *
 
-import charlievannorman.zanchat
 import charlievannorman.views
 
 urlpatterns = [

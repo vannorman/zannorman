@@ -79,8 +79,6 @@ def renderWithNav(request, template, obj = None, cookies = None):
 #		obj['safari'] = True # Strictly here to know whether or not to render the mp4 first or the webm first, since Safari is too retarded
 	obj["csrf"] = get_or_create_csrf_token(request)
 	obj["version"] = timezone.now()
-	obj["zan_chat_form"] = ZanChatForm()
-	obj["messages"] = ZanChatReport.objects.all()
 	response = render(request, template, obj)
 	return response
 

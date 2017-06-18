@@ -10,11 +10,3 @@ import datetime
 
 
 
-class ZanChatReport(models.Model):
-	user = models.ForeignKey(User, null=True, blank=True)
-	username = models.CharField(max_length=64) 
-	ip = models.IPAddressField()
-	email = models.CharField(max_length=64) # maybe they used a diff email than their login email?
-	name = models.CharField(max_length=64) 
-	message = models.CharField(max_length=1024)  
-	created_at = models.DateTimeField(default=timezone.now)
