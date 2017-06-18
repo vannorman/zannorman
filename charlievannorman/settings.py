@@ -1,5 +1,5 @@
 """
-Django settings for zannorman project.
+Django settings for charlievannorman project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -25,7 +25,7 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'zannorman/templates'),
+    os.path.join(BASE_DIR, 'charlievannorman/templates'),
 )
 
 STATICFILES_DIRS = [
@@ -39,7 +39,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-	'zannorman',
+	'charlievannorman',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,9 +58,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'zannorman.urls'
+ROOT_URLCONF = 'charlievannorman.urls'
 
-WSGI_APPLICATION = 'zannorman.wsgi.application'
+WSGI_APPLICATION = 'charlievannorman.wsgi.application'
 
 
 # Database

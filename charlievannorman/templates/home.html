@@ -6,7 +6,6 @@
 	{% block styles %}
 	
 		<link rel='stylesheet' href="/static/css/home.css"|add:version|safe %} type='text/css'>
-		<link rel='stylesheet' href='{% static "css/zanchat.css" %}' type='text/css'>
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,400,800" rel="stylesheet">
 	{% endblock %}
@@ -14,38 +13,14 @@
 	{% block scripts %}
 		<script src='{% static "js/jquery-1.11.0.min.js" %}'></script>
 		<script src='{% static "js/home.js" %}'></script>
-		<script src='{% static "js/zanchat.js" %}'></script>
 	{% endblock %}
 	</head>
 <body>
-<div id="zanchat">
-	<div id="muvOverlay">
-	</div>
-
-	<div id="muvIcon" class="transitionAll">
-		CHAT WITH ME!
-	</div>
-	<div id="muvWindow" class="rounded20">
-			<div id="muvWindowInner">
-				<form id="muvForm" method=POST action="/myuservoice/report">
-						{% csrf_token %}
-						{{ zan_chat_form }}
-						<div id="inputs">
-							<a id="muvSubmit" href="javascript:void(0)" class="button rounded20 pureWhiteButton" >SUBMIT</a>
-						</div>
-				</form>
-			</div>
-			{% for message in messages %}
-				{{ message.username }} says " {{ message.message }}" at {{ message.created_time }}
-			{% endfor %}
-		</div>
-</div>
-
 
 <div id="container">
 	<div id="pic"></div>
 	<div id="title">
-		<h1> Charlie Zannorman</h1>
+		<h1> Charlie Van Norman</h1>
 	</div>
 	<div id="tabs">
 		<ul>
@@ -78,7 +53,7 @@
 				</ul>
 			</div>
 			<div id="tabContact" class='tab'>
-				Contact me charlie@zannorman.com
+				Email: me@charlievannorman.com
 			</div>
 
 		</div>
