@@ -11,27 +11,45 @@ body {
 }
 #container {
 	position:relative;
-	padding-top:100px;
 	height:100%;
 	width:960px;
 	margin: 0 auto;
 	text-align:center;
 }
 
-#title {
-	display:inline-block;
+#top .title {
 	text-align:center;
 	font-weight:200;
-	margin: 0 auto;	
+	float:right;
+	width:400px;	
+	height:280px;
+	
+}
+#top .title h1 {
+	width:100%;
+	position:absolute;
+	text-align:center;
+	top:220px;
+	lefT:100px;
+	font-size:29px;
+	font-weight:600;
 }
 
-#pic {
-	position:relative;
-	display:inline-block;
+#top {
+	position:absolute;
+	display:block;
 	margin: 0 auto;	
-	border: 2px dotted #999;
-	width:400px;
+	left:0;
+	width:960px;
 	height:250px;
+}
+
+#top .pic {
+	float:left;
+	width:400px;	
+	height:280px;
+	background-image:url('/static/img/me.jpg');
+	background-size:contain;
 }
 
 #about {
@@ -47,6 +65,7 @@ body {
 	margin: 0 auto;
 	z-index:99;
 	position:relative;
+	top:300px;
 }
 #tabs >  ul {
 	text-align:left;
@@ -76,7 +95,7 @@ body {
 }
 
 #tabs > ul > .selected {
-	background-color:rgba(255,255,255,0.6);
+	background-color:white;
 }
 
 #tabs > ul > li:hover {
@@ -105,4 +124,93 @@ body {
 }
 #tabPortfolio, #tabContact {
 	display:none;
+}
+
+.imageList {
+	list-style-type:none;
+	border:0;padding:0;
+	margin: 10px 0 0 0 ;
+}
+
+#tabPortfolio ul > li {
+	display:inline-block;
+}
+
+#tabPortfolio > ul > li {
+	margin-bottom:30px;	
+
+}
+
+
+.item .title {
+	margin-top:20px;
+	font-size:29px;
+	font-weight:800;
+}
+.item .year {
+	font-weight:600;
+	font-size:19px;
+}
+
+.item .subtitle {
+	font-size:22px;
+	font-weight:400;
+}
+
+.item .description {
+	width:640px;
+	margin: 20px 0 0 0;
+}	
+
+
+
+
+
+.imageList > li > a {
+	position:relative;
+}
+.imageList > li > a > .img {
+	width:200px; height:120px; background-size:cover;
+	position:relative;
+}
+
+.imageHover {
+	width:200px;
+	height: 120px;
+	background-color:transparent;
+	z-index:105;
+	position:absolute;
+	top:-120px;
+	transition: all .3s;
+	-webkit-transition: all .3s;
+}
+.imageHover:hover {
+	background-color:rgba(0,0,0,0.15);
+}
+
+.videoPlayIcon {
+	background-image:url('/static/img/play_orig.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+	width:65px; height: 65px;
+	position:absolute;	
+	top:-90px;
+	left:65px;
+}
+
+
+.roles {
+	margin-top:20px;
+
+}
+.myRoles {
+	display:inline-block;
+}
+.myRoles > li {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color:#ccc;
+	padding:3px 8px;
+	margin: 3px;
 }
