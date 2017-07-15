@@ -34,14 +34,22 @@ def home(request):
 		"year" : "2016 - 2017",
 		"subtitle" : "An online math sandbox using WebGL",
 		"description" : """
-			At Super Math World, I built a game creation kit on top of a 3D math puzzler-platformer game. The editor is accessible from the game and takes you to a sky view where you can place and modify objects. In this way, users can use the same tools we use to create content.
-<br />
-<br /> 
-The WebGL executable is hosted by Amazon S3, served by Apache on Ubuntu. I built the backend using python/django, including the save and load flow (using MySQL on RDS on the back end, and a javascript layer between the game executable and the django server.) 
-<br />
-<br />
-""",
-		"my_roles" : ["Unity/c# developer","game designer","c# platform architect","python/django"],
+			I was responsible for:
+		""",
+		"description_list" : 
+			[
+				"3D interaction design",
+				"Game conscrution kit design",
+				"Game development using Unity/c#",
+				"Web development using python/django/SQL",
+				"SysAdmin using AWS EC2, Route53, SSL, S3, and Cloudfront",
+				"Integrated payment system using Strip",
+				"Maintained full integration pipeline from feature to production",
+				"Playtests with students and teachers"
+		],
+#At Super Math World, I built a game creation kit on top of a 3D math puzzler-platformer game. The editor is accessible from the game and takes you to a sky view where you can place and modify objects. In this way, users can use the same tools we use to create content.
+#The WebGL executable is hosted by Amazon S3, served by Apache on Ubuntu. I built the backend using python/django, including the save and load flow (using MySQL on RDS on the back end, and a javascript layer between the game executable and the django server.) 
+#		"my_roles" : ["Unity/c# developer","game designer","c# platform architect","python/django"],
 		"videos" : [
 				{ "source": "https://player.vimeo.com/video/219464062", "image" : "smw_1.jpg" }
 		],
@@ -52,7 +60,7 @@ The WebGL executable is hosted by Amazon S3, served by Apache on Ubuntu. I built
 		"title" : "Mathbreakers",
 		"year" : "2013 - 2015",
 		"subtitle" : "A downloadable math puzzle platformer for grades 2 - 8",
-		"description" : "An advnture puzzle game that teaches fundamental concepts in a playful, visual, and low-pressure way.",
+		"description" : "An adventure puzzle game that teaches fundamental concepts in a playful, visual, and low-pressure way.",
 		"my_roles" : ["Unity/c# developer","game designer"],
 		"videos" : [
 				{ "source": "https://player.vimeo.com/video/73754523", "image" : "mb_1.jpg" }

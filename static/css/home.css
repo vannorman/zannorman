@@ -141,25 +141,39 @@ body {
 
 }
 
-
-.item .title {
+.item .top {
 	margin-top:20px;
+	width:100%;
+	position:relative;
+	top:0;
+	height:80px;
+}
+.item .title {
 	font-size:29px;
 	font-weight:800;
+	position:relative;
+	float:left;
+	
 }
 .item .year {
 	font-weight:600;
 	font-size:19px;
+	position:absolute;
+	right: 0;
 }
 
 .item .subtitle {
+	top:5px;
 	font-size:22px;
 	font-weight:400;
+	position:absolute;
+	right:0;
 }
 
 .item .description {
 	width:640px;
-	margin: 20px 0 0 0;
+	margin: 20px 0 50px 0;
+	position:relative;
 }	
 
 
@@ -203,14 +217,6 @@ body {
 	margin-top:20px;
 
 }
-.myRoles {
-	display:inline-block;
-}
-.myRoles > li {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	background-color:#ccc;
-	padding:3px 8px;
-	margin: 3px;
+#tabPortfolio .item .description > ul > li {
+	display:block;
 }

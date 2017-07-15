@@ -36,10 +36,6 @@
 	</div>
 
 
-
-
-
-
 <div id="container">
 	<div id="top">
 		<div class="pic"></div>
@@ -57,27 +53,47 @@
 
 			<!-- tabs content begins here -->
 			<div id="tabAbout" class='tab'>
-				<p> Hello world! I am a software developer, tool maker, and simulation designer, and I love making 3-D interactive applications &#8211 including platformer games, data visualization, and virtual reality simulations.</p>
-				<p>	I call 'em like I see 'em, and I prefer to get straight to the point with as little politics as possible. I have strong opinions, weakly held, and when working I am most interested in pushing the project forwards to a solid release. </p>
+				<h3> Hello world! I am a game designer and web developer. </h3>
+				<p>
+					The spaces I am most passionate about are:
+					<ul>
+						<li> Education</li>
+						<li> Biotech & chemistry </li>
+						<li> 3D interaction design </li>
+						<li> Machine Learning </li>
+					</ul>
+				</p>
+				<p> My pastimes include: 
+					<ul>
+						<li> Playing Go (Rank ~5kyu)</li>
+						<li> Composing and playing music, mainly Keyboard and Guitar </li>
+						<li> Climbing & Bouldering </li>
+						<li> Carpentry </li>
+						<li> Constructing imaginary cities </li>
+						<li> Making video games </li>
+					</ul>
+				</p>
+						
+			
 
 			</div>
 			<div id="tabPortfolio" class='tab'>
 				<ul>
 					{% for item in portfolio %}
 						<li class='item'>
-							<div class='title'> 
-								{{ item.title }}
+							<div class="top">
+								<div class='title'> 
+									{{ item.title }}
+								</div>
+								<div class='subtitle'> 
+									{{ item.subtitle }}
+									<div class="year">{{item.year}}</div>
+								</div>
 							</div>
-							<div class='subtitle'> 
-								{{ item.subtitle }}
-								<div class="year">{{item.year}}</div>
-							</div>
-							<div class="description">{{ item.description|safe }}</div>
-							<div class="roles">	
-								My roles:
-								<ul class='myRoles'>
-									{% for role in item.my_roles %}
-										<li> {{ role }} </li>
+							<div class="description">{{ item.description|safe }}
+								<ul>
+									{% for d in item.description_list %}
+										<li> {{ d }} </li>
 									{% endfor %}
 								</ul>
 							</div>

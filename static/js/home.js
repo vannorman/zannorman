@@ -25,4 +25,6 @@ function ShowTab($button,$el) {
 	HideTabs();
 	$el.fadeIn();
 	$button.addClass('selected');
+//	window.history.pushState({},"", "#"+$el.attr('id'));
+ 
 }
