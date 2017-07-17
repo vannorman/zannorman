@@ -14,7 +14,7 @@
 
 	{% block scripts %}
 		<script src='{% static "js/jquery-1.11.0.min.js" %}'></script>
-		<script src='{% static "js/home.js" %}'></script>
+		<script src='static/js/home.js'|add:version|safe %}'></script>
 		<script src='static/js/imageviewer.js'|add:version|safe ></script>
 		<script src='static/js/vimeoPopup.js'|add:version|safe ></script>
 		<script src='static/js/scrollcontrol.js'|add:version|safe ></script>
@@ -45,32 +45,31 @@
 	</div>
 	<div id="tabs">
 		<ul>
-			<li id="tabButtonAbout" class="tabButton selected">Hello</li>
-			<li id="tabButtonPortfolio" class="tabButton">Portfolio</li>
-			<li id="tabButtonContact" class="tabButton">Contact</li>
+			<li class="tabButton selected">Hello</li>
+			<li class="tabButton">Portfolio</li>
+			<li class="tabButton">Resume</li>
+			<li class="tabButton">Contact</li>
 		</ul>
 		<div id="tabsContainer">
 
 			<!-- tabs content begins here -->
 			<div id="tabAbout" class='tab'>
-				<h3> Hello world! I am a game designer and web developer. </h3>
-				<p>
-					The spaces I am most passionate about are:
+				I am a game designer and software developer. I work best with small, agile teams (e.g. startups).
+				
+					<p>
+					Some spaces I am interested in:
 					<ul>
-						<li> Education</li>
-						<li> Biotech & chemistry </li>
-						<li> 3D interaction design </li>
+						<li> Educational video games</li>
+						<li> Biotech & chemistry simulations </li>
 						<li> Machine Learning </li>
+						<li> Real Estate </li>
 					</ul>
 				</p>
-				<p> My pastimes include: 
+				<p> Other stuff I enjoy doing: 
 					<ul>
 						<li> Playing Go (Rank ~5kyu)</li>
 						<li> Composing and playing music, mainly Keyboard and Guitar </li>
 						<li> Climbing & Bouldering </li>
-						<li> Carpentry </li>
-						<li> Constructing imaginary cities </li>
-						<li> Making video games </li>
 					</ul>
 				</p>
 						
@@ -81,18 +80,24 @@
 				<ul>
 					{% for item in portfolio %}
 						<li class='item'>
-							<div class="top">
-								<div class='title'> 
-									{{ item.title }}
-								</div>
-								<div class='subtitle'> 
-									{{ item.subtitle }}
-									<div class="year">{{item.year}}</div>
-								</div>
+							<div class="top1">
+								<div class='title'><a href={{item.link}} target="_blank"> {{ item.title }} </a></div>
+								<div class='subtitle'> {{ item.subtitle }}	</div>
 							</div>
-							<div class="description">{{ item.description|safe }}
+							<div class="top2">
+								<div class="year">{{item.year}}</div>
+								<div class="position">{{item.position}}</div>
+								
+							</div>
+							<div class="description">
+								{{ item.description|safe }}
+							</div>
+							<div class="responsibilities">	
+								<div class="head">
+									My responsibilities:
+								</div>
 								<ul>
-									{% for d in item.description_list %}
+									{% for d in item.responsibilities %}
 										<li> {{ d }} </li>
 									{% endfor %}
 								</ul>
@@ -121,8 +126,11 @@
 					{% endfor %}
 				</ul>
 			</div>
+			<div id="tabResume" class='tab'>
+				<div class='img'></div>
+			</div>
 			<div id="tabContact" class='tab'>
-				Email: me@charlievannorman.com
+				Email: <a href="mailto:me@charlievannorman.com?subject=Hi!" target="_blank">me@charlievannorman.com</a>
 			</div>
 
 		</div>

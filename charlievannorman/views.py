@@ -31,54 +31,49 @@ def home(request):
 	obj['portfolio'] = []
 	obj['portfolio'].append({
 		"title" : "Super Math World",
+		"link" : "https://supermathworld.com",
 		"year" : "2016 - 2017",
-		"subtitle" : "An online math sandbox using WebGL",
-		"description" : """
-			I was responsible for:
-		""",
-		"description_list" : 
-			[
-				"3D interaction design",
-				"Game conscrution kit design",
-				"Game development using Unity/c#",
-				"Web development using python/django/SQL",
+		"position" : "Founder, CTO",
+		"subtitle" : "A WebGL based math sandbox",
+		"description" : "I built a content generation platform on top of an educational math game. This allows users to edit, create, and share content from directly inside the application, natively in a web browser.",
+		"responsibilities" : 
+		[
+				"Framework architecture",
+				"Game design",
+				"Web backend using python/django/SQL",
 				"SysAdmin using AWS EC2, Route53, SSL, S3, and Cloudfront",
-				"Integrated payment system using Strip",
-				"Maintained full integration pipeline from feature to production",
-				"Playtests with students and teachers"
+				"Payment system using Stripe",
 		],
-#At Super Math World, I built a game creation kit on top of a 3D math puzzler-platformer game. The editor is accessible from the game and takes you to a sky view where you can place and modify objects. In this way, users can use the same tools we use to create content.
-#The WebGL executable is hosted by Amazon S3, served by Apache on Ubuntu. I built the backend using python/django, including the save and load flow (using MySQL on RDS on the back end, and a javascript layer between the game executable and the django server.) 
-#		"my_roles" : ["Unity/c# developer","game designer","c# platform architect","python/django"],
 		"videos" : [
 				{ "source": "https://player.vimeo.com/video/219464062", "image" : "smw_1.jpg" }
 		],
 		"images" : ["smw_2.jpg","smw_4.jpg","smw_3.jpg"],	
-		"link" : "https://supermathworld.com"
 		})
 	obj['portfolio'].append({
 		"title" : "Mathbreakers",
+		"link" : "https://mathbreakers.com",
 		"year" : "2013 - 2015",
-		"subtitle" : "A downloadable math puzzle platformer for grades 2 - 8",
-		"description" : "An adventure puzzle game that teaches fundamental concepts in a playful, visual, and low-pressure way.",
-		"my_roles" : ["Unity/c# developer","game designer"],
+		"position" : "Co-founder",
+		"subtitle" : "A math puzzle platformer for grades 2 - 8",
+		"description" : "We partnered with some of the biggest names in math education, including Dan Meyer and Jo Boaler, to discover the intersection between 3-D action gaming and elementary mathematics. The result was a truly immersive, stress free math game that kids love to play.",
+		"responsibilities" : ["Game design","Game development","Playtesting","Educational content","Business development"],
 		"videos" : [
 				{ "source": "https://player.vimeo.com/video/73754523", "image" : "mb_1.jpg" }
 		],
 		"images" : ["mb_2.jpg","mb_3.jpg","mb_4.jpg"],	
-		"link" : "https://mathbreakers.com"
 		})
 	obj['portfolio'].append({
-		"title" : "Mouse Brain Explorer VR",
+		"title" : "Mouse Brain Explorer",
+		"link" : "https://3scan.com",
 		"year" : "2015",
+		"position" : "Contractor",
 		"subtitle" : "Fly through a real mouse brain",
-		"description" : "Use XBOX controller and Oculus VR to pilot an imaginary ship through a real mouse brain. The one cubic centimeter brain was imaged by 3Scan.",
-		"my_roles" : ["Unity/c# developer","game designer"],
+		"description" : "Using a cubic centimeter of a mouse brain imaged with 3Scan's equipment, I made a virtual reality tour through the vasculature and a mini-game to destroy blood clots. This was on exhibit during the Exploratorium's science week in 2015.",
+		"responsibilities" : ["Simulation developer","Oculus, PC, and XBox controller setup"],
 		"videos" : [
 				{ "source": "https://player.vimeo.com/video/117482417", "image" : "3scan_1.jpg" }
 		],
 		"images" : [],	
-		"link" : "https://3scan.com"
 		})
 
 

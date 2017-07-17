@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#tabButtonAbout').click(function(){
+/*	$('#tabButtonAbout').click(function(){
 		ShowTab($(this),$('#tabAbout'));
 	});
 	$('#tabButtonPortfolio').click(function(){
@@ -7,24 +7,26 @@ $(document).ready(function(){
 	});
 	$('#tabButtonContact').click(function(){
 		ShowTab($(this),$('#tabContact'));
+	}); */
+	$('.tabButton').click(function(){
+		$('.tabButton').each(function(){
+			$(this).removeClass('selected');
+		});
+		ShowTab($(this).index());
+		$(this).addClass('selected');
 	});
+//	ShowTab($('#tabButtonPortfolio'),$('#tabPortfolio'));
 });
 
-function HideTabs () {
+function ShowTab(i){
 	$('.tab').each(function(){
-		$(this).fadeOut();
-	});
-	$('.tabButton').each(function(){
-		$(this).removeClass('selected');
+		if ($(this).index() == i){
+			$(this).fadeIn();
+		} else {
+			$(this).fadeOut();
+		}
 	});
 
 }
 
-function ShowTab($button,$el) {
-	if ($button.hasClass('selected')) return;
-	HideTabs();
-	$el.fadeIn();
-	$button.addClass('selected');
-//	window.history.pushState({},"", "#"+$el.attr('id'));
- 
-}
+
