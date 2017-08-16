@@ -1,6 +1,1 @@
-this is my first commit!
-:wq
-:oops, how do I VIM again?
-ZZ
-j/k i know how to vim
-
+This is a regular style website built on Django for any server-side extensibility (none being used in this instance)
