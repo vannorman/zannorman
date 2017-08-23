@@ -30,6 +30,40 @@ def home(request):
 	obj = {}
 	obj['portfolio'] = []
 	obj['portfolio'].append({
+		"title" : "VR Space Archer",
+		"link" : "",
+		"year" : "2017",
+		"position" : "Developer",
+		"subtitle" : "An action game for Vive/Oculus",
+		"description" : "Fly around in 3D space and shoot drones and space-men with your bow and arrow.",
+		"responsibilities" : 
+		[
+				"Game design",
+				"Vive integration",
+		],
+		"videos" : [
+				{ "source": "https://player.vimeo.com/video/230824116", "image" : "" }
+		],
+		"images" : ["archer2.png","archer1.png"],	
+	})
+	obj['portfolio'].append({
+		"title" : "VR Fitness Cube",
+		"link" : "",
+		"year" : "2017",
+		"position" : "Developer",
+		"subtitle" : "An exercise game for Vive/Oculus",
+		"description" : "Cubes fly at you, and you smash them with your fists! Duck and dodge to prevent losing health.",
+		"responsibilities" : 
+		[
+				"Game design",
+				"Vive integration",
+		],
+		"videos" : [
+				{ "source": "https://player.vimeo.com/video/230823053", "image" : "" }
+		],
+		"images" : ["fitness1.png","fitness2.png"],	
+	})
+	obj['portfolio'].append({
 		"title" : "Super Math World",
 		"link" : "https://supermathworld.com",
 		"year" : "2016 - 2017",
@@ -40,9 +74,8 @@ def home(request):
 		[
 				"Framework architecture",
 				"Game design",
-				"Web backend using python/django/SQL",
-				"SysAdmin using AWS EC2, Route53, SSL, S3, and Cloudfront",
-				"Payment system using Stripe",
+				"Web backend (python, django, MySQL)",
+				"SysAdmin (EC2, Cloudfront)",
 		],
 		"videos" : [
 				{ "source": "https://player.vimeo.com/video/219464062", "image" : "smw_1.jpg" }
@@ -56,7 +89,13 @@ def home(request):
 		"position" : "Co-founder",
 		"subtitle" : "A math puzzle platformer for grades 2 - 8",
 		"description" : "We partnered with some of the biggest names in math education, including Dan Meyer and Jo Boaler, to discover the intersection between 3-D action gaming and elementary mathematics. The result was a truly immersive, stress free math game that kids love to play.",
-		"responsibilities" : ["Game design","Game development","Playtesting","Educational content","Business development"],
+		"responsibilities" : 
+		[
+			"Game design",
+			"Programming",
+			"Product management",
+			"Strategic partnerships",
+		],
 		"videos" : [
 				{ "source": "https://player.vimeo.com/video/73754523", "image" : "mb_1.jpg" }
 		],
