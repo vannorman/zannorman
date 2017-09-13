@@ -38,8 +38,6 @@ def home(request):
 		"description" : "Fly around in 3D space and shoot drones and space-men with your bow and arrow.",
 		"responsibilities" : 
 		[
-				"Game design",
-				"Vive integration",
 		],
 		"videos" : [
 				{ "source": "https://player.vimeo.com/video/230824116", "image" : "" }
@@ -55,8 +53,6 @@ def home(request):
 		"description" : "Cubes fly at you, and you smash them with your fists! Duck and dodge to prevent losing health.",
 		"responsibilities" : 
 		[
-				"Game design",
-				"Vive integration",
 		],
 		"videos" : [
 				{ "source": "https://player.vimeo.com/video/230823053", "image" : "" }
