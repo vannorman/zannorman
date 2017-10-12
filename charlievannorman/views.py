@@ -52,7 +52,6 @@ def home(request):
 		"images" : [
 			{"video" : { "source": "https://player.vimeo.com/video/230823053", "img" : "fitness2.png" }},
 			{"img":"fitness1.png"},
-			{"img":"fitness2.png"}
 		],	
 	})
 	obj['developer'].append({
@@ -68,18 +67,6 @@ def home(request):
 		}],	
 	})	
 	obj['developer'].append({
-		"title" : "Code Hero 3D",
-		"link" : "https://codehero.org",
-		"year" : "2011",
-		"position" : "Game developer",
-		"subtitle" : "Fly through a real mouse brain",
-		"description" : "I met Alex Peake when Code Hero was in its infancy. Based on our shared passion for the education industry, I came on to build the first 3D version of the game which went on to raise $175K on Kickstarter.",
-		"images" : [{
-			"video" : { "source": "https://player.vimeo.com/video/117482417", "img" : "3scan_1.jpg" }
-			
-		}],	
-	})	
-	obj['developer'].append({
 		"title" : "Startup Grid",
 		"link" : "https://startupgrid.net",
 		"year" : "2012",
@@ -87,7 +74,19 @@ def home(request):
 		"description" : "One of my first projects, I sought to give insight into the startup world by scraping CrunchBase data with layered search filters, for job seekers or new founders. It still works! Check it out: <a href='http://startupgrid.net' style='color:blue'>StartupGrid.net</a>",
 		"images" : [{"img":'startupgrid.png'}],	
 		})
+	obj['developer'].append({
+		"title" : "Code Hero 3D",
+		"link" : "https://codehero.org",
+		"year" : "2011",
+		"position" : "Game developer",
+		"subtitle" : "Fly through a real mouse brain",
+		"description" : "Alex Peake and I met when Code Hero was in its infancy. Based on our shared passion for the education industry, I came on and we  built the first 3D version of the game in which you reprogram the world around you in real time using a javascript laser.",
+	"images" : [
+			{"img":"codehero.png"},
+		],	
 
+	})	
+	
 	obj['founder'] = []
 	obj['founder'].append({
 		"title" : "Super Math World",
@@ -153,6 +152,15 @@ def home(request):
 			],	
 		})
 
+
+	obj['social'] = [
+		{ "name" : "github.com/zannorman", "link" : "https://github.com/zannorman" },
+		{ "name" : "github.com/zannorman", "link" : "https://github.com/zannorman" },
+		{ "name" : "linkedin.com/in/zannorman", "link" : "https://www.linkedin.com/in/zannorman" },
+		{ "name" : "facebook.com/zannorman", "link" : "https://www.facebook.com/zannorman" },
+		{ "name" : "twitter.com/@supermathworld", "link" : "https://twitter.com/@supermathworld" },
+		{ "name" : "angel.co/supermathworld", "link" : "https://angel.co/supermathworld" },
+	]
 
 	return renderWithNav(request,'home.html', obj)
 

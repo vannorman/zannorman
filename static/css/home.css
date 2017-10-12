@@ -11,8 +11,7 @@ body {
 }
 #container {
 	position:relative;
-	height:100%;
-	width:820px;
+	width:720px;
 	margin: 0 auto;
 	text-align:center;
 }
@@ -21,8 +20,8 @@ body {
 	text-align:center;
 	font-weight:200;
 	width:400px;	
-	position:absolute;
-	left:280px;
+	position:relative;
+	lefT:240px;
 	top:50px;
 	text-align:center;
 	font-size:35px;
@@ -35,18 +34,17 @@ body {
 	vertical-align:center;
 	left:280px;
 	text-align:left;
-	padding: 30px;
 	top:100px;
 	position:absolute;
 }
 
 #top {
-	position:absolute;
+	position:relative;
+	margin:0 auto;
 	display:block;
 	margin: 0 auto;	
 	left:0;
-	width:820px;
-	height:250px;
+	width:780px;
 }
 
 #top .picContainer  {
@@ -86,7 +84,7 @@ body {
 	margin: 0 auto;
 	z-index:99;
 	position:relative;
-	top:300px;
+	top:200px;
 }
 #tabs >  ul {
 	text-align:center;
@@ -142,16 +140,8 @@ body {
 	width:640px;
 	position:absolute; top:0px; left:0px;
 	margin: 0 auto;
-	
-}
-#tabAbout, #tabContact {
-	padding: 30px;
-}
-
-
-
-.tab {
 	display:none;
+	padding-bottom:150px;
 }
 
 .tab:first-child {

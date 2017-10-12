@@ -47,10 +47,11 @@
 		</div>
 		<div class='hello'> 
 <!--			<ul style="list-style-type:none">-->
-			<ul style="padding:0;margin:0;">
-				<li> Extended Reality is the future for gaming and corporate training </li>
-				<li> Production studios will begin automating asset pipelines </li>
-				<li> Dev tools are becoming more powerful and accessible </li>
+			<ul style="padding:0;margin:0;list-style-type:none;">
+				<li style="list-style-type:none;font-weight:600;text-decoration:underline;">By the year 2030:</li>
+				<li> XR is the norm for video games and interactive training apps </li>
+				<li> Tiny studios will have automated, ML powered asset pipelines </li>
+				<li> The tech of 2017 HMUs is realized through contact lenses </li>
 			</ul>
 			<!-- Virtual, augmented, and mixed reality is the future of visual interaction. -->
 
@@ -62,6 +63,7 @@
 			<li class="tabButton">Projects </li>
 			<li class="tabButton">More </li>
 			<li class="tabButton">Simulator </li>
+			<li class="tabButton">Contact </li>
 		</ul>
 		<div id="tabsContainer">
 
@@ -188,6 +190,10 @@
 						<p> People sometimes ask me: What is the most valuable thing you've learned as a founder? Rather than tech, product, or business, I say that cultivating a growth mindset and investing in relationships are the keys to success. (Oh, and a whole lot of grit!) </p>
 					</li>
 
+					<li> <h3> Hobbies </h3>
+						<p> I casually play guitar, piano, and drums with an indie/chill vibe and a shade of melodic metal. Also into climbing, martial arts, snowboarding, surfing, and deep learning.</p>
+					</li>
+
 				</ul>
 			</div>
 			<div id="tabSimulate" class='tab'>
@@ -202,8 +208,8 @@
 
 <h3>	What roles can you do well? </h3>
 	As a founder I've had to be "good enough" at a lot of things, and I'll learn whatever is needed to execute on high level tasks. What drives me is a focus on the end user experience and building a successful business.
+	<p> Here are some skills I picked up along my way, in order of ascending competence: </p>
 	<ul style="list-style-type:none;">
-		<li>	Here are some skills I picked up along my way, in order of ascending competence: </li>
 		<li>	Marketing & Sales </li>
 		<li>	Full stack web dev </li>
 		<li>	Automate asset pipelines </li>
@@ -214,10 +220,9 @@
 
 <h3>	Where do you see yourself in five years? </h3>
 	<ul style="list-style-type:none;">
-		<li>	I will be doing what I love and creating the most value I can. </li>
 		<li>	I will be a founding member of a 10 person XR company. </li>
 		<li>	I will (part-time) run an executive consulting firm with a dozen clients who come to me for advice and technical pivots. </li>
-		<li>	I will improve my mindset and relationships -- and have a high skill in fostering a positive work environment, where each member puts in their all and achieves self actualization in their role. </li>
+		<li>	I will project more empowerment, value, and fun on my colleagues. </li>
 	</ul>
 
 <h3>	What are you looking for? </h3>
@@ -233,12 +238,19 @@
 		<li>	Deep learning </li>
 	</ul>
 
-<h3>	Why do you work? </h3>
-	I love to have fun, and I love playing with fun toys. When I build something, I share in the joy of the experience.
-		<div id="spacer" style="padding-bottom:200px;"></div>
-		</div>
-
 	</div>
+	<div id="tabMore" class='tab'>
+		<div class="cont" style="margin:0 auto; width:200px;">
+			<ul style="list-style-type:none;">
+				{% for item in social %} 
+					<li> <a style="color:blue;" href="{{item.link}}" target="_blank" >{{ item.name }}</a></li>
+				{% endfor %}
+				<li> me@charlievannorman.com </li>
+			</ul>
+		</div>
+	</div>
+
+
 </div>
 
 </body>
