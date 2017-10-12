@@ -12,7 +12,7 @@ body {
 #container {
 	position:relative;
 	height:100%;
-	width:960px;
+	width:820px;
 	margin: 0 auto;
 	text-align:center;
 }
@@ -20,19 +20,24 @@ body {
 #top .title {
 	text-align:center;
 	font-weight:200;
-	float:right;
 	width:400px;	
-	height:280px;
+	position:absolute;
+	left:280px;
+	top:50px;
+	text-align:center;
+	font-size:35px;
+	font-weight:600;
 	
 }
-#top .title h1 {
-	width:100%;
+
+#top .hello {
+	margin: 0 auto;
+	vertical-align:center;
+	left:280px;
+	text-align:left;
+	padding: 30px;
+	top:100px;
 	position:absolute;
-	text-align:center;
-	top:220px;
-	lefT:100px;
-	font-size:29px;
-	font-weight:600;
 }
 
 #top {
@@ -40,16 +45,32 @@ body {
 	display:block;
 	margin: 0 auto;	
 	left:0;
-	width:960px;
+	width:820px;
 	height:250px;
 }
 
-#top .pic {
-	float:left;
-	width:400px;	
-	height:280px;
-	background-image:url('/static/img/me.jpg');
-	background-size:contain;
+#top .picContainer  {
+	left:0; top:0; 
+	width:280px;
+	height:200px;
+	position:absolute;
+}
+
+#top .picContainer .pic {
+	position:relative;
+	margin: 0 auto;
+	top:20px;
+	left:0;
+	width:170px;	
+	height:170px;
+	background-image:url('/static/img/cartoon_1.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+
+	-webkit-border-radius: 300px;
+	-moz-border-radius: 300px;
+	border-radius: 300px;	
 }
 
 #about {
@@ -107,7 +128,7 @@ body {
 	background-color:rgba(255,255,255,0.6);
 	height:100%;
 	position:relative;
-	width:900px;
+	width:640px;
 	padding: 0 30px;
 	margin:0 auto;
 	opacity:.99;
@@ -116,31 +137,27 @@ body {
 	border-top:1px solid #ccc;
 	
 }
-#tabAbout, #tabPortfolio, #tabContact {
-	width:900px;
+
+.tab {
+	width:640px;
+	position:absolute; top:0px; left:0px;
 	margin: 0 auto;
-	position:absolute; top:0px; left:30px;
 	
 }
 #tabAbout, #tabContact {
 	padding: 30px;
 }
 
-#tabAbout {
-	width:640px;
-	position:relative;
-	margin:0 auto;
-}
-#tabPortfolio, #tabContact, #tabResume {
+
+
+.tab {
 	display:none;
-
 }
 
-#tabPortfolio {
-	position:relative;
-	width:640px;
-	margin: 0 auto;
+.tab:first-child {
+	display:block;
 }
+
 
 #tabResume .img {
 	 background-image:url("/static/img/resume.png");
@@ -156,11 +173,11 @@ body {
 	margin: 10px 0 0 0 ;
 }
 
-#tabPortfolio ul > li {
+#tabFounder ul > li, #tabDeveloper ul > li {
 	display:inline-block;
 }
 
-#tabPortfolio > ul > li {
+#tabFounder > ul > li, #tabDeveloper > ul > li {
 	margin-bottom:30px;	
 
 }
@@ -199,6 +216,7 @@ body {
 }
 
 .item .subtitle {
+	display:none;
 	top:5px;
 	font-size:22px;
 	font-weight:400;
@@ -211,6 +229,10 @@ body {
 	position:relative;
 }	
 
+#tabDeveloper .item, #tabFounder .item {
+	padding-bottom:40px;
+}
+
 .imageList > li > a {
 	position:relative;
 }
@@ -218,7 +240,12 @@ body {
 	width:150px; 
 	height:90px; 
 	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
 	position:relative;
+}
+.imageList > li > a > .contain {
+	background-size:contain;
 }
 
 .imageHover {
@@ -250,16 +277,16 @@ body {
 	margin-top:20px;
 
 }
-#tabPortfolio .item .responsibilities > ul {
+#tabFounder .item .responsibilities > ul, #tabDeveloper .item .responsibilities > ul {
 	margin : 0; padding:0;
 }
 
 
-#tabPortfolio .item .responsibilities > ul > li {
+#tabFounder .item .responsibilities > ul > li, #tabDeveloper .item .responsibilities > ul > li {
 	display:block;
 }
 
-#tabPortfolio .item .responsibilities > .head {
+#tabFounder .item .responsibilities > .head, #tabDeveloper .item .responsibilities > .head {
 	font-weight:600;
 }
 a {
@@ -272,4 +299,22 @@ a:hover {
 a, a:-webkit-any-link, a:visited, { 
 	color:black;
 	text-decoration:none;	
+}
+
+#tabMore {
+	width:600px;
+	margin:0 auto;
+}
+#tabMore > ul {
+	list-style-type:none;
+}
+#tabMore > ul > li > h3 {
+	display:inline-block;
+	padding:0; margin:0;
+	position:relative;
+	top:2px;
+}
+#tabMore > ul > li:before {
+  content: "\2605";
+	padding-right:10px;
 }

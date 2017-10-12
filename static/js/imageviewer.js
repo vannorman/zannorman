@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#imageOverlay').click(function(e){
+	$('#imageOverlay, .currentImage').click(function(e){
 		if (e.target  == this){
 			IMAGE_VIEWER.Hide();
 		}

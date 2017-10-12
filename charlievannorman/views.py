@@ -28,57 +28,89 @@ def simple_page(template):
 
 def home(request):
 	obj = {}
-	obj['portfolio'] = []
-	obj['portfolio'].append({
-		"title" : "VR Space Archer",
+	obj['developer'] = []
+	obj['developer'].append({
+		"title" : "Space Archer VR",
 		"link" : "",
 		"year" : "2017",
-		"position" : "Developer",
+		"position" : "Game developer",
 		"subtitle" : "An action game for Vive/Oculus",
 		"description" : "Fly around in 3D space and shoot drones and space-men with your bow and arrow.",
-		"responsibilities" : 
-		[
-		],
-		"videos" : [
-				{ "source": "https://player.vimeo.com/video/230824116", "image" : "" }
-		],
-		"images" : ["archer2.png","archer1.png"],	
+		"images" : [	
+			{"video" : { "source": "https://player.vimeo.com/video/230824116", "image" : "" }},
+			{"img":"archer2.png"},
+			{"img":"archer1.png"}
+		],	
 	})
-	obj['portfolio'].append({
-		"title" : "VR Fitness Cube",
+	obj['developer'].append({
+		"title" : "Fitness Cube VR",
 		"link" : "",
 		"year" : "2017",
-		"position" : "Developer",
+		"position" : "Game developer",
 		"subtitle" : "An exercise game for Vive/Oculus",
 		"description" : "Cubes fly at you, and you smash them with your fists! Duck and dodge to prevent losing health.",
-		"responsibilities" : 
-		[
-		],
-		"videos" : [
-				{ "source": "https://player.vimeo.com/video/230823053", "image" : "" }
-		],
-		"images" : ["fitness1.png","fitness2.png"],	
+		"images" : [
+			{"video" : { "source": "https://player.vimeo.com/video/230823053", "img" : "fitness2.png" }},
+			{"img":"fitness1.png"},
+			{"img":"fitness2.png"}
+		],	
 	})
-	obj['portfolio'].append({
+	obj['developer'].append({
+		"title" : "Mouse Brain Explorer VR",
+		"link" : "https://3scan.com",
+		"year" : "2015",
+		"position" : "Game developer",
+		"subtitle" : "Fly through a real mouse brain",
+		"description" : "Using a cubic centimeter of a mouse brain imaged with 3Scan's equipment, I made a virtual reality tour through the vasculature and a mini-game to destroy blood clots. This was on exhibit during the Exploratorium's science week in 2015.",
+		"images" : [{
+			"video" : { "source": "https://player.vimeo.com/video/117482417", "img" : "3scan_1.jpg" }
+			
+		}],	
+	})	
+	obj['developer'].append({
+		"title" : "Code Hero 3D",
+		"link" : "https://codehero.org",
+		"year" : "2011",
+		"position" : "Game developer",
+		"subtitle" : "Fly through a real mouse brain",
+		"description" : "I met Alex Peake when Code Hero was in its infancy. Based on our shared passion for the education industry, I came on to build the first 3D version of the game which went on to raise $175K on Kickstarter.",
+		"images" : [{
+			"video" : { "source": "https://player.vimeo.com/video/117482417", "img" : "3scan_1.jpg" }
+			
+		}],	
+	})	
+	obj['developer'].append({
+		"title" : "Startup Grid",
+		"link" : "https://startupgrid.net",
+		"year" : "2012",
+		"position" : "Developer",
+		"description" : "One of my first projects, I sought to give insight into the startup world by scraping CrunchBase data with layered search filters, for job seekers or new founders. It still works! Check it out: <a href='http://startupgrid.net' style='color:blue'>StartupGrid.net</a>",
+		"images" : [{"img":'startupgrid.png'}],	
+		})
+
+	obj['founder'] = []
+	obj['founder'].append({
 		"title" : "Super Math World",
 		"link" : "https://supermathworld.com",
 		"year" : "2016 - 2017",
 		"position" : "Founder, CTO",
-		"subtitle" : "A WebGL based math sandbox",
-		"description" : "I built a content generation platform on top of an educational math game. This allows users to edit, create, and share content from directly inside the application, natively in a web browser.",
+#		"subtitle" : "A WebGL based math sandbox",
+		"description" : "A math sandbox video game for grades 2 - 8 which allows users to edit, create, and share game content from directly inside the application, natively in a web browser.",
 		"responsibilities" : 
 		[
-				"Framework architecture",
-				"Game design",
-				"Web backend (python, django, MySQL)",
-				"SysAdmin (EC2, Cloudfront)",
+				"Unity c# framework architecture",
+				"Game design & programming",
+				"Web backend (python, django, MySQL, AWS)",
 		],
-		"videos" : [
-				{ "source": "https://player.vimeo.com/video/219464062", "image" : "smw_1.jpg" }
-		],
-		"images" : ["smw_2.jpg","smw_4.jpg","smw_3.jpg"],	
+		"images" : [
+			{ "img" : "smw.png", "class" : "contain"},
+			{ "video" : { "source": "https://player.vimeo.com/video/219464062", "img" : "smw_1.jpg" }},
+			{ "img" : "smw_2.jpg"},
+			{ "img" : "smw_4.jpg"},
+#			{ "img" : "smw_3.jpg"}
+		],	
 		})
-	obj['portfolio'].append({
+	obj['founder'].append({
 		"title" : "Mathbreakers",
 		"link" : "https://mathbreakers.com",
 		"year" : "2013 - 2015",
@@ -87,30 +119,39 @@ def home(request):
 		"description" : "We partnered with some of the biggest names in math education, including Dan Meyer and Jo Boaler, to discover the intersection between 3-D action gaming and elementary mathematics. The result was a truly immersive, stress free math game that kids love to play.",
 		"responsibilities" : 
 		[
-			"Game design",
-			"Programming",
-			"Product management",
+			"Game design & programming",
 			"Strategic partnerships",
 		],
-		"videos" : [
-				{ "source": "https://player.vimeo.com/video/73754523", "image" : "mb_1.jpg" }
-		],
-		"images" : ["mb_2.jpg","mb_3.jpg","mb_4.jpg"],	
-		})
-	obj['portfolio'].append({
-		"title" : "Mouse Brain Explorer",
-		"link" : "https://3scan.com",
-		"year" : "2015",
-		"position" : "Contractor",
-		"subtitle" : "Fly through a real mouse brain",
-		"description" : "Using a cubic centimeter of a mouse brain imaged with 3Scan's equipment, I made a virtual reality tour through the vasculature and a mini-game to destroy blood clots. This was on exhibit during the Exploratorium's science week in 2015.",
-		"responsibilities" : ["Simulation developer","Oculus, PC, and XBox controller setup"],
-		"videos" : [
-				{ "source": "https://player.vimeo.com/video/117482417", "image" : "3scan_1.jpg" }
-		],
-		"images" : [],	
+		"images" : [
+			{ "img" : "mb.png", "class" : "contain" },
+			{ "video" : { "source": "https://player.vimeo.com/video/73754523", "img" : "mb_1.jpg" }},
+			{ "img" : "mb_2.jpg"},
+#			{ "img" : "mb_3.jpg"},
+			{ "img" : "mb_4.jpg"}
+		],	
 		})
 
+	obj['founder'].append({
+		"title" : "Fractal Games",
+		"link" : "https://fractalgames.com (old)",
+		"year" : "2010 - 2011",
+		"position" : "Founder",
+		"subtitle" : "An iOS game development studio.",
+		"description" : "We produced two games, 'Santa\'s Last Stand' and 'Bank Defense' for iOS." ,
+		"responsibilities" : 
+		[
+			"Game design & programming",
+			"Hired and managed art team",
+		],
+		"images" : [	
+			{"img": "fg.png","class":"contain"},
+			{"img" : "bd1.png"},
+			{"img" : "bd2.png"},
+			{"img" : "bd3.png"},
+			{"img" : "sls1.png"},
+			{"img" : "sls2.png"}
+			],	
+		})
 
 
 	return renderWithNav(request,'home.html', obj)

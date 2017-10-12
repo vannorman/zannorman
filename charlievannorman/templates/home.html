@@ -1,7 +1,7 @@
 {% load static %}
 	<head>
 		<title> Charlie Van Norman </title>
-<link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon-smiley.png" />		
+<link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon-star.png" />		
 	<meta name="google-site-verification" content="KPrCTIkFg3RCIWPoYvQO3QBnFcEqKflrEQI_6ztrwzE" />
 	{% block styles %}
 	
@@ -38,53 +38,89 @@
 
 <div id="container">
 	<div id="top">
-		<div class="pic"></div>
-		<div class="title">
-			<h1> Charlie Van Norman</h1>
+		<div class='picContainer'>
+			<div class="pic"></div>
+		
 		</div>
-	</div>
+		<div class="title">
+			 Charlie Zannorman
+		</div>
+		<div class='hello'> 
+<!--			<ul style="list-style-type:none">-->
+			<ul style="padding:0;margin:0;">
+				<li> Extended Reality is the future for gaming and corporate training </li>
+				<li> Production studios will begin automating asset pipelines </li>
+				<li> Dev tools are becoming more powerful and accessible </li>
+			</ul>
+			<!-- Virtual, augmented, and mixed reality is the future of visual interaction. -->
+
+		</div>
+		</div>
 	<div id="tabs">
 		<ul>
-			<li class="tabButton selected">Hello</li>
-			<li class="tabButton">Portfolio</li>
-			<li class="tabButton">Resume</li>
-			<li class="tabButton">Contact</li>
+			<li class="tabButton selected">Founder </li>
+			<li class="tabButton">Projects </li>
+			<li class="tabButton">More </li>
+			<li class="tabButton">Simulator </li>
 		</ul>
 		<div id="tabsContainer">
 
 			<!-- tabs content begins here -->
-			<div id="tabAbout" class='tab'>
-				<div class='hello'> 
-					I thrive in challenging, flexible work environments (Startups with <15 people). I can take on a variety of roles; I am comfortable on the business, product, or tech side, and am most fulfilled when working on projects involving 3D experiences.
-		
-				</div>
-				
-				<p>
-					How I add value:
-					<ul>
-						<li> Project management </li>
-						<li> Dev tools & automation </li>
-						<li> 3D experience design </li>
-						<li> Full stack development </li>
-						<li> Sales & strategic partnerships </li>
-					</ul>
-				</p>
-				<p> Hobbies: 
-					<ul>
-						<li> Deep Learning </li>
-						<li> Playing music (guitar, piano, drums) </li>
-						<li> Playing Go</li>
-						<li> Climbing & Bouldering </li>
-						<li> Quantum physics, astrophysics, consciousness </li>
-					</ul>
-				</p>
-						
-			
+			<!-- Note the index of the ul/li tab above must line up with the div-->
 
-			</div>
-			<div id="tabPortfolio" class='tab'>
+			<div id="tabFounder" class='tab'>
 				<ul>
-					{% for item in portfolio %}
+					{% for item in founder %}
+						<li class='item'>
+							<div class="top1">
+								<div class='title'><a href={{item.link}} target="_blank"> {{ item.title }} </a></div>
+								<div class='subtitle'> {{ item.subtitle }}	</div>
+							</div>
+							<div class="top2">
+								<div class="year">{{item.year}}</div>
+								<div class="position">{{item.position}}</div>
+								
+							</div>
+							<div class="description">
+								{{ item.description|safe }}
+							</div>
+							<div class="responsibilities">	
+								<div class="head">
+<!--									My responsibilities: -->
+								</div>
+								<ul>
+									{% for d in item.responsibilities %}
+										<li> {{ d }} </li>
+									{% endfor %}
+								</ul>
+							</div>
+							<ul class='imageList'>
+								{% for image in item.images %}
+								<li>
+									{% if image.video %}
+									
+									<a href=javascript:void(0) onclick=javascript:VIMEO_OVERLAY.Show('{{image.video.source}}'); target='_blank' name='{{image.video.img }}'>
+										<div class='img'  style='background-image:url("/static/img/{{ image.video.img }}");' ></div>
+										<div class='videoPlayIcon'></div>
+										<div class='imageHover'></div>
+									</a>
+									{% else %} 
+									<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'>
+										<div class="img {{image.class}}" style='background-image:url("/static/img/{{ image.img }}");' ></div>
+										<div class='imageHover'></div>
+									</a>
+									{% endif %}
+									
+								</li>
+								{% endfor %}
+							</ul>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div id="tabDeveloper" class='tab'>
+				<ul>
+					{% for item in developer %}
 						<li class='item'>
 							<div class="top1">
 								<div class='title'><a href={{item.link}} target="_blank"> {{ item.title }} </a></div>
@@ -111,20 +147,25 @@
 							<ul class='imageList'>
 								{% for video in item.videos %}
 								<li>
-									<a href=javascript:void(0) onclick=javascript:VIMEO_OVERLAY.Show('{{video.source}}'); target='_blank' name='{{image}}'>
-										<div class='img'  style='background-image:url("/static/img/{{ video.image }}");' ></div>
-										<div class='videoPlayIcon'></div>
-									<div class='imageHover'></div>
-									</a>
-								</li>
+							</li>
 								{% endfor %}
 								
 								{% for image in item.images %}
 								<li>
-									<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image}}'>
-										<div class='img'  style='background-image:url("/static/img/{{ image }}");' ></div>
-									<div class='imageHover'></div>
+									{% if image.video %}
+									
+									<a href=javascript:void(0) onclick=javascript:VIMEO_OVERLAY.Show('{{image.video.source}}'); target='_blank' name='{{image.video.img }}'>
+										<div class='img'  style='background-image:url("/static/img/{{ image.video.img }}");' ></div>
+										<div class='videoPlayIcon'></div>
+										<div class='imageHover'></div>
 									</a>
+									{% else %} 
+									<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'>
+										<div class="img {{image.class}}" style='background-image:url("/static/img/{{ image.img }}");' ></div>
+										<div class='imageHover'></div>
+									</a>
+									{% endif %}
+									
 								</li>
 								{% endfor %}
 							</ul>
@@ -132,15 +173,106 @@
 					{% endfor %}
 				</ul>
 			</div>
-			<div id="tabResume" class='tab'>
-				<div class='img'></div>
-			</div>
-			<div id="tabContact" class='tab'>
-				Email: <a href="mailto:me@charlievannorman.com?subject=Hi!" target="_blank">me@charlievannorman.com</a>
-			</div>
+			<div id="tabMore" class='tab'>
+				<ul>
+					<li> <h3> Extended Reality </h3>
+						<p> Extended reality (XR, VR, AR, and MR) moves the medium away from the screen and into 3D space, which is where our brains were meant to play. We've crossed a threshhold; XR is finally within reach.</p>
+					</li>
 
+
+					<li> <h3> Deep Learning & automation</h3>
+						<p> I've made a habit of automating development workflows where possible; machine learning can augment this approach significantly, and this is a core pillar of my approach to the tech stack. Automate all the things!</p> 
+					 </li>
+
+					<li> <h3> Mindset & Relationships </h3>
+						<p> People sometimes ask me: What is the most valuable thing you've learned as a founder? Rather than tech, product, or business, I say that cultivating a growth mindset and investing in relationships are the keys to success. (Oh, and a whole lot of grit!) </p>
+					</li>
+
+				</ul>
+			</div>
+			<div id="tabSimulate" class='tab'>
+	<div style="text-align:center;color:#666;width:100%;margin:0 auto;">	Conversation with Charlie simulator (version 1.0): </div>
+	<h3>	What are you best at?</h3>
+		<ul style="list-style-type:none;">
+			<li> Designing a fun-to-touch 3D experience. </li>
+			<li> Envisioning the company from end-to-end. </li>
+			<li> Executing on-time deliverables. </li>
+		</ul>
+
+
+<h3>	What roles can you do well? </h3>
+	As a founder I've had to be "good enough" at a lot of things, and I'll learn whatever is needed to execute on high level tasks. What drives me is a focus on the end user experience and building a successful business.
+	<ul style="list-style-type:none;">
+		<li>	Here are some skills I picked up along my way, in order of ascending competence: </li>
+		<li>	Marketing & Sales </li>
+		<li>	Full stack web dev </li>
+		<li>	Automate asset pipelines </li>
+		<li>	Executive strategy </li>
+		<li>	Project management </li>
+		<li>	3D interaction design & programming </li>
+	</ul>
+
+<h3>	Where do you see yourself in five years? </h3>
+	<ul style="list-style-type:none;">
+		<li>	I will be doing what I love and creating the most value I can. </li>
+		<li>	I will be a founding member of a 10 person XR company. </li>
+		<li>	I will (part-time) run an executive consulting firm with a dozen clients who come to me for advice and technical pivots. </li>
+		<li>	I will improve my mindset and relationships -- and have a high skill in fostering a positive work environment, where each member puts in their all and achieves self actualization in their role. </li>
+	</ul>
+
+<h3>	What are you looking for? </h3>
+	I'm currently building a company in the XR space for corporate training. 
+	<p>More generally, I'm looking for fun, challenging, work with a fun, competent team! Ideally as a contractor, advisor or consultant, as I would like to leverage myself as highly as possible to maximize my impact -- although I will consider full-time work for the right fit (probably a startup).</p>
+
+<h3>	What industries do you work in? </h3>
+	<ul style="list-style-type:none;">
+		<li>	Virtual / Augmented Reality </li>
+		<li>	Biotech, especially nanobots and motors </li>
+		<li>	Data visualization </li>
+		<li>	3D experience design, games, and simulations </li>
+		<li>	Deep learning </li>
+	</ul>
+
+<h3>	Why do you work? </h3>
+	I love to have fun, and I love playing with fun toys. When I build something, I share in the joy of the experience.
+		<div id="spacer" style="padding-bottom:200px;"></div>
 		</div>
+
 	</div>
 </div>
 
 </body>
+
+
+
+
+
+
+
+
+<!--			<div id="tabAbout" class='tab'>
+			
+				<p>
+					How I add value:
+					<ul>
+						<li> Project management </li>
+						<li> Dev tools & automation </li>
+						<li> 3D experience design </li>
+						<li> Full stack development </li>
+						<li> Sales & strategic partnerships </li>
+					</ul>
+				</p>
+				<p> Hobbies: 
+					<ul>
+						<li> Deep Learning </li>
+						<li> Playing music (guitar, piano, drums) </li>
+						<li> Playing Go</li>
+						<li> Climbing & Bouldering </li>
+						<li> Quantum physics, astrophysics, consciousness </li>
+					</ul>
+				</p>
+						
+			
+
+			</div>
+-->
