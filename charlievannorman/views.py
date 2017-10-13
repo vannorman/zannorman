@@ -155,7 +155,6 @@ def home(request):
 
 	obj['social'] = [
 		{ "name" : "github.com/zannorman", "link" : "https://github.com/zannorman" },
-		{ "name" : "github.com/zannorman", "link" : "https://github.com/zannorman" },
 		{ "name" : "linkedin.com/in/zannorman", "link" : "https://www.linkedin.com/in/zannorman" },
 		{ "name" : "facebook.com/zannorman", "link" : "https://www.facebook.com/zannorman" },
 		{ "name" : "twitter.com/@supermathworld", "link" : "https://twitter.com/@supermathworld" },
