@@ -67,7 +67,7 @@ def home(request):
 		}],	
 	})	
 	obj['developer'].append({
-		"title" : "Startup Grid",
+		"title" : "Startup Grid (formerly Hactus)",
 		"link" : "https://startupgrid.net",
 		"year" : "2012",
 		"position" : "Developer",
@@ -80,7 +80,7 @@ def home(request):
 		"year" : "2011",
 		"position" : "Game developer",
 		"subtitle" : "Fly through a real mouse brain",
-		"description" : "Alex Peake and I met when Code Hero was in its infancy. Based on our shared passion for the education industry, I came on and we  built the first 3D version of the game in which you reprogram the world around you in real time using a javascript laser.",
+		"description" : "Alex Peake and I met when Code Hero was in its infancy. Based on our shared passion for the education industry, I joined the project and built the first 3D version of the game in which you reprogram the world around you in real time using a javascript laser.",
 	"images" : [
 			{"img":"codehero.png"},
 		],	
