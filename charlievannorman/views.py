@@ -97,8 +97,8 @@ def home(request):
 		"description" : "An end-to-end development studio for training, simulations, and aptitude assessment applications using AR and VR.",
 		"responsibilities" : 
 		[
+				"Business development",
 				"Project management",
-				"Business development & Strategic partnerships",
 				"3D Interaction Design",
 		],
 		"images" : [
