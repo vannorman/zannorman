@@ -89,6 +89,23 @@ def home(request):
 	
 	obj['founder'] = []
 	obj['founder'].append({
+		"title" : "XR20 Studios",
+		"link" : "https://xr20studios.com",
+		"year" : "2017",
+		"position" : "Founder",
+#		"subtitle" : "A WebGL based math sandbox",
+		"description" : "An end-to-end development studio for training, simulations, and aptitude assessment applications using AR and VR.",
+		"responsibilities" : 
+		[
+				"Project management",
+				"Business development & Strategic partnerships",
+				"3D Interaction Design",
+		],
+		"images" : [
+			{ "img" : "xr20studios_logo.png", "class" : "contain"},
+		],	
+		})
+	obj['founder'].append({
 		"title" : "Super Math World",
 		"link" : "https://supermathworld.com",
 		"year" : "2016 - 2017",
