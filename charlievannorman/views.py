@@ -77,12 +77,12 @@ def home(request):
 		}],	
 	})	
 	obj['developer'].append({
-		"title" : "Startup Grid (formerly Hactus)",
+		"title" : "Startup Grid (Hactus)",
 		"link" : "https://startupgrid.net",
 		"year" : "2012",
 		"position" : "Developer",
-		"description" : "One of my first projects, I sought to give insight into the startup world by scraping CrunchBase data with layered search filters, for job seekers or new founders. It still works! Check it out: <a href='http://startupgrid.net' style='color:blue'>StartupGrid.net</a>",
-		"images" : [{"img":'startupgrid.png'}],	
+		"description" : "One of my first projects, a search-and-filter website for exploring the startup landscape and searching for new opportunities. The startup data is scraped from CrunchBase.",
+		"images" : [{"img":'startupgrid.png', "link":"http://startupgrid.net"}],	
 		})
 	obj['developer'].append({
 		"title" : "Code Hero 3D",
@@ -103,7 +103,7 @@ def home(request):
 		"year" : "2017",
 		"position" : "Founder",
 #		"subtitle" : "A WebGL based math sandbox",
-		"description" : "An end-to-end development studio for virutal and augmented reality applications, including corporate training, brain-body connection, simulations, and aptitude assessment.",
+		"description" : "An end-to-end development studio for VR and AR applications, including corporate training, brain-body connection, simulations, and aptitude assessment.",
 		"responsibilities" : 
 		[
 				"Business development",
