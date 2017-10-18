@@ -110,9 +110,12 @@
 										<div class='videoPlayIcon'></div>
 										<div class='imageHover'></div>
 									</a>
-									{% else %} 
-									<a href='{{item.link}}' target='_blank' name='{{image.img}}'>
-									<!-- <a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'> -->
+									{% else %}
+										{% if image.link %} 
+											<a href='{{image.link}}' target='_blank' name='{{image.img}}'>
+										{% else %}
+											<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'> 
+										{% endif %}
 										<div class="img {{image.class}}" style='background-image:url("/static/img/{{ image.img }}");' ></div>
 										<div class='imageHover'></div>
 									</a>
@@ -169,9 +172,12 @@
 										<div class='imageHover'></div>
 									</a>
 									{% else %} 
-									<a href='{{item.link}}' target='_blank' name='{{image.img}}'>
-
-<!--									<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'>-->
+										{% if image.link %} 
+											<a href='{{image.link}}' target='_blank' name='{{image.img}}'>
+										{% else %}
+											<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'> 
+										{% endif %}
+	
 										<div class="img {{image.class}}" style='background-image:url("/static/img/{{ image.img }}");' ></div>
 										<div class='imageHover'></div>
 									</a>

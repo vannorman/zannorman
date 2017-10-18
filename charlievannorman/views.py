@@ -111,7 +111,7 @@ def home(request):
 				"3D Interaction Design",
 		],
 		"images" : [
-			{ "img" : "xr20studios_logo.png", "class" : "contain"},
+			{ "img" : "xr20studios_logo.png", "class" : "contain", "link" : "http://xr20studios.com"},
 		],	
 		})
 	obj['founder'].append({
@@ -128,7 +128,7 @@ def home(request):
 				"Web backend (python, django, MySQL, AWS)",
 		],
 		"images" : [
-			{ "img" : "smw.png", "class" : "contain"},
+			{ "img" : "smw.png", "class" : "contain", "link" : "Https://supermathworld.com" },
 			{ "video" : { "source": "https://player.vimeo.com/video/219464062", "img" : "smw_1.jpg" }},
 			{ "img" : "smw_2.jpg"},
 			{ "img" : "smw_4.jpg"},
@@ -148,7 +148,7 @@ def home(request):
 			"Strategic partnerships",
 		],
 		"images" : [
-			{ "img" : "mb.png", "class" : "contain" },
+			{ "img" : "mb.png", "class" : "contain", "link" : "https://mathbreakers.com/" },
 			{ "video" : { "source": "https://player.vimeo.com/video/73754523", "img" : "mb_1.jpg" }},
 			{ "img" : "mb_2.jpg"},
 #			{ "img" : "mb_3.jpg"},
