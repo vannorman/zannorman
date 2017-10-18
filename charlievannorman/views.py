@@ -111,7 +111,7 @@ def home(request):
 				"3D Interaction Design",
 		],
 		"images" : [
-			{ "img" : "xr20studios_logo.png", "class" : "contain", "link" : "http://xr20studios.com"},
+			{ "img" : "xr20studios_logo.png", "class" : "contain square", "link" : "http://xr20studios.com"},
 		],	
 		})
 	obj['founder'].append({
