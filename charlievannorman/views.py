@@ -101,7 +101,7 @@ def home(request):
 		"title" : "XR20 Studios",
 		"link" : "http://xr20studios.com",
 		"year" : "2017",
-		"position" : "Founder",
+		"position" : "Partner",
 #		"subtitle" : "A WebGL based math sandbox",
 		"description" : "An end-to-end development studio for VR and AR applications, including corporate training, brain-body connection, simulations, and aptitude assessment.",
 		"responsibilities" : 
