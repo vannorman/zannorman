@@ -103,7 +103,7 @@ def home(request):
 		"year" : "2017",
 		"position" : "Founder",
 #		"subtitle" : "A WebGL based math sandbox",
-		"description" : "An end-to-end development studio for training, simulations, and aptitude assessment applications using AR and VR.",
+		"description" : "An end-to-end development studio for virutal and augmented reality applications, including corporate training, brain-body connection, simulations, and aptitude assessment.",
 		"responsibilities" : 
 		[
 				"Business development",

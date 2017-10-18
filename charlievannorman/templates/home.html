@@ -108,7 +108,7 @@
 									<a href=javascript:void(0) onclick=javascript:VIMEO_OVERLAY.Show('{{image.video.source}}'); target='_blank' name='{{image.video.img }}'>
 										<div class='img'  style='background-image:url("/static/img/{{ image.video.img }}");' ></div>
 										<div class='videoPlayIcon'></div>
-										<div class='imageHover'></div>
+										<div class='imageHover {{image.class}}'></div>
 									</a>
 									{% else %}
 										{% if image.link %} 
@@ -117,7 +117,7 @@
 											<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'> 
 										{% endif %}
 										<div class="img {{image.class}}" style='background-image:url("/static/img/{{ image.img }}");' ></div>
-										<div class='imageHover'></div>
+										<div class='imageHover {{image.class}}'></div>
 									</a>
 									{% endif %}
 									
@@ -169,7 +169,7 @@
 										<a href='{{item.link}}' target='_blank' name='{{image.img}}'>
 										<div class='img'  style='background-image:url("/static/img/{{ image.video.img }}");' ></div>
 										<div class='videoPlayIcon'></div>
-										<div class='imageHover'></div>
+										<div class='imageHover {{image.class}}'></div>
 									</a>
 									{% else %} 
 										{% if image.link %} 
