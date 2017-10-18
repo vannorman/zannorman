@@ -111,7 +111,8 @@
 										<div class='imageHover'></div>
 									</a>
 									{% else %} 
-									<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'>
+									<a href='{{item.link}}' target='_blank' name='{{image.img}}'>
+									<!-- <a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'> -->
 										<div class="img {{image.class}}" style='background-image:url("/static/img/{{ image.img }}");' ></div>
 										<div class='imageHover'></div>
 									</a>
@@ -159,14 +160,18 @@
 								{% for image in item.images %}
 								<li>
 									{% if image.video %}
+									<a href='{{item.link}}' target='_blank' name='{{image.img}}'>
 									
-									<a href=javascript:void(0) onclick=javascript:VIMEO_OVERLAY.Show('{{image.video.source}}'); target='_blank' name='{{image.video.img }}'>
+									<!--<a href=javascript:void(0) onclick=javascript:VIMEO_OVERLAY.Show('{{image.video.source}}'); target='_blank' name='{{image.video.img }}'>-->
+										<a href='{{item.link}}' target='_blank' name='{{image.img}}'>
 										<div class='img'  style='background-image:url("/static/img/{{ image.video.img }}");' ></div>
 										<div class='videoPlayIcon'></div>
 										<div class='imageHover'></div>
 									</a>
 									{% else %} 
-									<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'>
+									<a href='{{item.link}}' target='_blank' name='{{image.img}}'>
+
+<!--									<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'>-->
 										<div class="img {{image.class}}" style='background-image:url("/static/img/{{ image.img }}");' ></div>
 										<div class='imageHover'></div>
 									</a>
@@ -182,38 +187,30 @@
 		<div id="tabSimulate" class='tab'>
 	<div style="text-align:center;color:#777;width:100%;margin:0 auto;">	Conversation with Charlie simulator (version 1.0) </div>
 
-<h3>	What excites you? </h3>
-	<p> Extended Reality (XR, VR, AR, and MR) moves the medium away from the screen and into 3D space, which is where our brains were meant to play. We've crossed a threshhold; XR is finally within reach! </p>
-	<p> On the development pipeline side, I'm very bullish on augmenting or replacing workflows with automation and machine learning. </p>		
+<h3>	What spaces are you most excited about? </h3>
+	<p> Extended Reality (XR, VR, AR, and MR) moves the medium away from the screen and into 3D space, which humans love to play with! </p>
+	<p> Deep learning is a huge asset for automation and procedural object generation. This is especially good for content pipelines at game studios.</p>
+	<p> Mid-to-large size companies spend a lot on hiring and training. XR applications can offset those costs while also offering better results. </p>
+	<!--<p> Blockchain is the future of human agreement. It's the new _______ { wax seal, printing press, public domain, newspaper, lawyer }-->
 
-<h3>	What is the most valuable thing you've learned as a founder? </h3>
-Cultivating a growth mindset, positive attitude, and strong personal relationships.
+<!--<h3>	What have you learned as a founder? </h3>
+<ul>
+	<li> Pursue a growth mindset and a positive attitude. </li>
+	<li> Closing one strategic partner can mean the life of the company. </li>
+</ul>-->
+
 	
 
 <h3>	What skills do you have? </h3>
-	As a founder I have a passion for creating amazing experiences for the end user, and empowering my team to do so as well. I've picked up some useful skills in this pursuit:
+	As a founder, I have developed a well-rounded skill set, and am always learning more!
 	<ul style="list-style-type:none;">
-		<li>	Company vision </li>
 		<li>	Strategic partnerships </li>
 		<li>	Full stack development </li>
 		<li>	Project management </li>
 		<li>	3D game programming </li>
+		<li>	3D interaction design </li>
 	</ul>
 
-<h3>	What are you looking for? </h3>
-	I am available for consulting work in the 3D application space, including traditional video games, virtual reality, and augmented reality applications. 
-	<br/><br/>
-	I am in the early stages of building an XR development studio, and am filling out the team. Contact me to learn more. 
-
-<h3>	What industries interest you? </h3>
-	
-	<ul style="list-style-type:none;">
-		<li>	Virtual / Augmented Reality </li>
-		<li>	High fidelity aptitude assessment apps </li>
-		<li>	Biotech, especially nanobots and motors </li>
-		<li>	Data visualization </li>
-		<li>	Deep learning </li>
-	</ul>
 
 <h3>	What do you do for fun? </h3>
 	I love going on adventures! With the right attitude and friends there is no limit to the fun you can have.

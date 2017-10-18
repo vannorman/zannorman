@@ -29,11 +29,22 @@ def simple_page(template):
 def home(request):
 	obj = {}
 	obj['developer'] = []
+#	obj['developer'].append({
+#		"title" : "Jet ZT",
+#		"link" : "http://tiny.jetzt",
+#		"year" : "2017",
+##		"subtitle" : "A prototype of a 3D flying game with missiles",
+#		"description" : "A prototype of a 3D flying game. Press Shift to move forwards, and use the mouse to navigate and fire. This one-level demo consists of a ship, cannon and missile capabilities, and moving targets. You can crash on the ",
+#		"images" : [	
+#			{"video" : { "source": "https://player.vimeo.com/video/230824116", "image" : "" }},
+#			{"img":"archer2.png"},
+#			{"img":"archer1.png"}
+#		],	
+#	})
 	obj['developer'].append({
 		"title" : "Space Archer VR",
 		"link" : "",
 		"year" : "2017",
-		"position" : "Game developer",
 		"subtitle" : "An action game for Vive/Oculus",
 		"description" : "Fly around in 3D space and shoot drones and space-men with your bow and arrow.",
 		"images" : [	
@@ -46,7 +57,6 @@ def home(request):
 		"title" : "Fitness Cube VR",
 		"link" : "",
 		"year" : "2017",
-		"position" : "Game developer",
 		"subtitle" : "An exercise game for Vive/Oculus",
 		"description" : "Cubes fly at you, and you smash them with your fists! Duck and dodge to prevent losing health.",
 		"images" : [
@@ -58,7 +68,7 @@ def home(request):
 		"title" : "Mouse Brain Explorer VR",
 		"link" : "https://3scan.com",
 		"year" : "2015",
-		"position" : "Game developer",
+		"position" : "Contractor",
 		"subtitle" : "Fly through a real mouse brain",
 		"description" : "Using a cubic centimeter of a mouse brain imaged with 3Scan's equipment, I made a virtual reality tour through the vasculature and a mini-game to destroy blood clots. This was on exhibit during the Exploratorium's science week in 2015.",
 		"images" : [{
@@ -78,8 +88,7 @@ def home(request):
 		"title" : "Code Hero 3D",
 		"link" : "https://codehero.org",
 		"year" : "2011",
-		"position" : "Game developer",
-		"subtitle" : "Fly through a real mouse brain",
+		"position" : "Contractor",
 		"description" : "Alex Peake and I met when Code Hero was in its infancy. Based on our shared passion for the education industry, I joined the project and built the first 3D version of the game in which you reprogram the world around you in real time using a javascript laser.",
 	"images" : [
 			{"img":"codehero.png"},
