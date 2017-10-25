@@ -101,9 +101,9 @@ def home(request):
 		"title" : "XR20 Studios",
 		"link" : "http://xr20studios.com",
 		"year" : "2017",
-		"position" : "Partner",
+		"position" : "Consultant & Apprentice",
 #		"subtitle" : "A WebGL based math sandbox",
-		"description" : "An end-to-end development studio for VR and AR applications, including corporate training, brain-body connection, simulations, and aptitude assessment.",
+		"description" : "I'm building AR and VR prototypes, and I'm in the early stages of team building for a b2b studio. Our targets are medical device training, corporate innovation sprints, emotional/psychological treatment, and aptitude assessment.",
 		"responsibilities" : 
 		[
 				"Business development",
