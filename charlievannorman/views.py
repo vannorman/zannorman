@@ -103,7 +103,7 @@ def home(request):
 		"year" : "2017",
 		"position" : "Consultant & Apprentice",
 #		"subtitle" : "A WebGL based math sandbox",
-		"description" : "[ radian.ai coming soon ] AR and VR is more engaging, impactful, and cost effective than existing \"flat\" solutions across multiple industries. Our prospective customer applications include medical device training, corporate innovation sprints, emotional/psychological treatment, and aptitude assessment.",
+		"description" : "AR and VR is more engaging, impactful, and cost effective than existing \"flat\" solutions across multiple industries. Customer applications include hazardous situation simulation, medical device training, corporate innovation sprints, psychological treatment, and aptitude assessment.",
 		"responsibilities" : 
 		[
 				"Business development",
