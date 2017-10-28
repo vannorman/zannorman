@@ -98,12 +98,12 @@ def home(request):
 	
 	obj['founder'] = []
 	obj['founder'].append({
-		"title" : "XR20 Studios",
+		"title" : "Radian Studios",
 		"link" : "http://xr20studios.com",
 		"year" : "2017",
 		"position" : "Consultant & Apprentice",
 #		"subtitle" : "A WebGL based math sandbox",
-		"description" : "I'm building AR and VR prototypes, and I'm in the early stages of team building for a b2b studio. Our targets are medical device training, corporate innovation sprints, emotional/psychological treatment, and aptitude assessment.",
+		"description" : "[ radian.ai coming soon ] AR and VR is more engaging, impactful, and cost effective than existing \"flat\" solutions across multiple industries. Our prospective customer applications include medical device training, corporate innovation sprints, emotional/psychological treatment, and aptitude assessment.",
 		"responsibilities" : 
 		[
 				"Business development",
