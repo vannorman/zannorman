@@ -99,7 +99,7 @@ def home(request):
 	obj['founder'] = []
 	obj['founder'].append({
 		"title" : "Radian Studios",
-		"link" : "http://xr20studios.com",
+		"link" : "http://radian.ai",
 		"year" : "2017",
 		"position" : "Consultant & Apprentice",
 #		"subtitle" : "A WebGL based math sandbox",
