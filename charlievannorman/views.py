@@ -25,6 +25,10 @@ def simple_page(template):
 		return renderWithNav(request, template)
 	return handler
 
+def file_a(request):
+	return HttpResponse("7GN_wPd4X1PrCxmqKOrw9sHsAd0_uayFhOnWdEw6Ytc.HrFduo8MJADNQACN38q371h8yDpWwuARiTcP3lgNOOM")
+def file_b(request):
+	return HttpResponse("v9b5S4UbuLtvh_PwuhqjfOUnVfiulJSmFCYkNHtD6mA.myqbUoOfbuYMTb3HuxVonYYuwHgoAV2835bCeWTwqkY")
 
 def home(request):
 	obj = {}
