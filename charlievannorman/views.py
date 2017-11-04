@@ -89,11 +89,11 @@ def home(request):
 		"images" : [{"img":'startupgrid.png', "link":"http://startupgrid.net"}],	
 		})
 	obj['developer'].append({
-		"title" : "Code Hero 3D",
+		"title" : "Code Hero",
 		"link" : "https://codehero.org",
 		"year" : "2011",
 		"position" : "Contractor",
-		"description" : "Alex Peake and I met when Code Hero was in its infancy. Based on our shared passion for the education industry, I joined the project and built the first 3D version of the game in which you reprogram the world around you in real time using a javascript laser.",
+		"description" : "I led production of the first 3D version of Code Hero, in which you learn programming by editing the world around you in real time using a javascript laser.",
 	"images" : [
 			{"img":"codehero.png"},
 		],	
