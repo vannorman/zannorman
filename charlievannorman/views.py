@@ -46,6 +46,18 @@ def home(request):
 #		],	
 #	})
 	obj['developer'].append({
+		"title" : "Magic Hands VR",
+		"link" : "",
+		"year" : "2017",
+		"subtitle" : "An action game for Vive/Oculus + LeapMotion",
+		"description" : "Use your hands to cast spells and open portals to other worlds.",
+		"images" : [	
+			{"video" : { "source": "https://player.vimeo.com/video/241614660", "image" : "" }},
+			{"img":"magichands1.png"},
+			{"img":"magichands2.png"}
+		],	
+	})
+	obj['developer'].append({
 		"title" : "Space Archer VR",
 		"link" : "",
 		"year" : "2017",
@@ -69,6 +81,18 @@ def home(request):
 		],	
 	})
 	obj['developer'].append({
+		"title" : "Coffee Command ARKit",
+		"link" : "",
+		"year" : "2017",
+		"subtitle" : "A passive multiplayer base control game",
+		"description" : "Your phone becomes a ship which can attack bases and drones at your favorite coffee shop in a 3-D shooter style game. Once you clear the area, you can build your own turrets to deter other players and control the area, and mine resources from areas you control to become more powerful.",
+		"images" : [
+			{"img":"coffeecommand1.png"},
+			{"img":"coffeecommand2.png"},
+			{"img":"coffeecommand3.png"},
+		],	
+	})
+	obj['developer'].append({
 		"title" : "Mouse Brain Explorer VR",
 		"link" : "https://3scan.com",
 		"year" : "2015",
@@ -80,45 +104,27 @@ def home(request):
 			
 		}],	
 	})	
-	obj['developer'].append({
-		"title" : "Startup Grid (Hactus)",
-		"link" : "https://startupgrid.net",
-		"year" : "2012",
-		"position" : "Developer",
-		"description" : "One of my first projects, a search-and-filter website for exploring the startup landscape and searching for new opportunities. The startup data is scraped from CrunchBase.",
-		"images" : [{"img":'startupgrid.png', "link":"http://startupgrid.net"}],	
-		})
-	obj['developer'].append({
-		"title" : "Code Hero",
-		"link" : "https://codehero.org",
-		"year" : "2011",
-		"position" : "Contractor",
-		"description" : "I led production of the first 3D version of Code Hero, in which you learn programming by editing the world around you in real time using a javascript laser.",
-	"images" : [
-			{"img":"codehero.png"},
-		],	
 
-	})	
 	
-	obj['founder'] = []
-	obj['founder'].append({
+	obj['startups'] = []
+	obj['startups'].append({
 		"title" : "Radian Studios",
 		"link" : "http://radian.ai",
 		"year" : "2017",
 		"position" : "Consultant & Apprentice",
 #		"subtitle" : "A WebGL based math sandbox",
-		"description" : "AR and VR is more engaging, impactful, and cost effective than existing \"flat\" solutions across multiple industries. Customer applications include hazardous situation simulation, medical device training, corporate innovation sprints, psychological treatment, and aptitude assessment.",
+		"description" : "I am offering consulting, creating demos, and building a team for an XR content studio. Potential customer applications include hazardous environment simulations, medical device training, corporate innovation sprints, corporate HR training, immersive patient therapy, and aptitude assessment.",
 		"responsibilities" : 
 		[
-				"Business development",
-				"Project management",
-				"3D Interaction Design",
+#				"Business development",
+#				"Project management",
+#				"3D Interaction Design",
 		],
 		"images" : [
 			{ "img" : "radian_logo.png", "class" : "contain square", "link" : "http://radian.ai"},
 		],	
 		})
-	obj['founder'].append({
+	obj['startups'].append({
 		"title" : "Super Math World",
 		"link" : "https://supermathworld.com",
 		"year" : "2016 - 2017",
@@ -139,11 +145,11 @@ def home(request):
 #			{ "img" : "smw_3.jpg"}
 		],	
 		})
-	obj['founder'].append({
+	obj['startups'].append({
 		"title" : "Mathbreakers",
 		"link" : "https://mathbreakers.com",
 		"year" : "2013 - 2015",
-		"position" : "Co-founder",
+		"position" : "Co-Founder",
 		"subtitle" : "A math puzzle platformer for grades 2 - 8",
 		"description" : "We partnered with some of the biggest names in math education, including Dan Meyer and Jo Boaler, to discover the intersection between 3-D action gaming and elementary mathematics. The result was a truly immersive, stress free math game that kids love to play.",
 		"responsibilities" : 
@@ -160,7 +166,7 @@ def home(request):
 		],	
 		})
 
-	obj['founder'].append({
+	obj['startups'].append({
 		"title" : "Fractal Games",
 		"link" : "https://fractalgames.com (old)",
 		"year" : "2010 - 2011",
@@ -181,7 +187,25 @@ def home(request):
 			{"img" : "sls2.png"}
 			],	
 		})
+	obj['startups'].append({
+		"title" : "Startup Grid (Hactus)",
+		"link" : "https://startupgrid.net",
+		"year" : "2012",
+		"position" : "Founder",
+		"description" : "One of my first solo projects, a search-and-filter website for exploring the startup landscape and searching for new opportunities. The startup data is scraped from CrunchBase. The original vision was to provide startups a go-to resource for funding, incubators, and other opportunities.",
+		"images" : [{"img":'startupgrid.png', "link":"http://startupgrid.net"}],	
+		})
+	obj['startups'].append({
+		"title" : "Code Hero",
+		"link" : "https://codehero.org",
+		"year" : "2011",
+		"position" : "Contractor",
+		"description" : "I led production of the first 3D version of Code Hero, in which you learn programming by editing the world around you in real time using a javascript laser.",
+	"images" : [
+			{"img":"codehero.png"},
+		],	
 
+	})	
 
 	obj['social'] = [
 		{ "name" : "github.com/zannorman", "link" : "https://github.com/zannorman" },
