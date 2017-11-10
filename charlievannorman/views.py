@@ -113,7 +113,7 @@ def home(request):
 		"year" : "2017",
 		"position" : "Consultant & Apprentice",
 #		"subtitle" : "A WebGL based math sandbox",
-		"description" : "Consulting and contracting services for VR and AR applications, including executive strategy, b2b sales and partnerships, and full stack development. Our favorite b2b opportunities: hazardous environment simulations, medical device training, corporate innovation sprints, corporate HR training, immersive patient therapy, and aptitude assessments.",
+		"description" : "Consulting and contracting services for VR and AR applications, including executive strategy, b2b sales and partnerships, and full stack development. Our favorite b2b opportunities: hazardous environment simulations, athletic performance trainers, medical device training, corporate innovation sprints, corporate HR training, immersive patient therapy, and aptitude assessments.",
 		"responsibilities" : 
 		[
 #				"Business development",
