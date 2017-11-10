@@ -113,7 +113,7 @@ def home(request):
 		"year" : "2017",
 		"position" : "Consultant & Apprentice",
 #		"subtitle" : "A WebGL based math sandbox",
-		"description" : "At Radian.ai, I consult for startups in the VR and AR space for enterprise, and our dev team builds full stack customer applications, including hazardous environment simulations, medical device training, corporate innovation sprints, corporate HR training, immersive patient therapy, and aptitude assessments.",
+		"description" : "Consulting and contracting services for VR and AR applications, including executive strategy, b2b sales and partnerships, and full stack development. Our favorite b2b opportunities: hazardous environment simulations, medical device training, corporate innovation sprints, corporate HR training, immersive patient therapy, and aptitude assessments.",
 		"responsibilities" : 
 		[
 #				"Business development",
