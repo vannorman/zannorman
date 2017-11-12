@@ -104,6 +104,18 @@ def home(request):
 			
 		}],	
 	})	
+	obj['developer'].append({
+		"title" : "Ring Flight",
+		"link" : "",
+		"year" : "2012",
+		"position" : "Hackathon developer",
+		"subtitle" : "Fly through rings",
+		"description" : "Made at a Kinect hackathon in 2012, this was my first experience integrating external hardware to a Unity game and capturing motion data as player input. In this game you fly through rings of different colors by tilting your body in the direction you wish to steer (lean forwards and backwards for pitch, left and right for yaw)",
+		"images" : [{
+			
+		}],	
+	})	
+
 
 	
 	obj['startups'] = []
