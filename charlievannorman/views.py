@@ -46,6 +46,19 @@ def home(request):
 #		],	
 #	})
 	obj['developer'].append({
+		"title" : "Space Frog",
+		"link" : "",
+		"year" : "2017",
+		"subtitle" : "An action game for Vive/Oculus + LeapMotion",
+		"description" : "Rescue the prince from the Space Crabs! You play as princess GeroGero (that is the sound a frog makes in Japanese), and you have to bust through waves of crabs to save your Prince. Punching missiles is the only mechanic. \"Sorry Princess, but your Prince is in another Mothership!\"",
+		"images" : [	
+			{"video" : { "source": "https://player.vimeo.com/video/244438057", "image" : "sf1.png" }},
+			{"img":"sf2.png"},
+			{"img":"sf3.png"},
+			{"img":"sf4.png"},
+		],	
+	})
+	obj['developer'].append({
 		"title" : "Magic Hands VR",
 		"link" : "",
 		"year" : "2017",
