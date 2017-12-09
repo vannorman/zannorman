@@ -78,7 +78,7 @@ def renderWithNav(request, template, obj = None, cookies = None):
 #	if not valid_browser(request):
 #		obj['safari'] = True # Strictly here to know whether or not to render the mp4 first or the webm first, since Safari is too retarded
 	obj["csrf"] = get_or_create_csrf_token(request)
-	obj["version"] = timezone.now()
+	obj["version"] =  "?" + str(time.time())
 	response = render(request, template, obj)
 	return response
 

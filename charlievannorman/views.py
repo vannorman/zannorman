@@ -46,6 +46,32 @@ def home(request):
 #		],	
 #	})
 	obj['developer'].append({
+		"title" : "Village Builder",
+		"link" : "",
+		"year" : "2017",
+		"subtitle" : "",
+		"description" : "A LightLodges production for communal coherence, village building and sustainable communities. Explore a virtual village filled with 360 videos and stories about real cities. Precursor to a live Mixed Reality gameshow coming 2018. I'm helping manage and develop the VR video game.",
+		"images" : [	
+			{"video" : { "source": "https://player.vimeo.com/video/246606943", "image" : "vb1.png" }},
+			{"img":"vb2.png"},
+			{"img":"vb3.png"},
+			{"img":"vb4.png"},
+		],	
+	})
+	obj['developer'].append({
+		"title" : "Humon / SpaceVR",
+		"link" : "",
+		"year" : "2017",
+		"subtitle" : "",
+		"description" : "Humon AI Company is making robots that will augment human tasks. Robots are controlled using human inputs in Virtual Reality, and can be trained on the data gathered by human inputs (using Vive controllers). I'm helping them make the Unity VR experience for robot control.",
+		"images" : [	
+#			{"video" : { "source": "https://player.vimeo.com/video/246606943", "image" : "vb1.png" }},
+#			{"img":"vb2.png"},
+#			{"img":"vb3.png"},
+#			{"img":"vb4.png"},
+		],	
+	})
+	obj['developer'].append({
 		"title" : "Space Frog",
 		"link" : "",
 		"year" : "2017",
@@ -133,17 +159,13 @@ def home(request):
 	
 	obj['startups'] = []
 	obj['startups'].append({
-		"title" : "Radian Studios",
+		"title" : "Radian Consulting",
 		"link" : "http://radian.ai",
 		"year" : "2017",
-		"position" : "Consultant & Apprentice",
-#		"subtitle" : "A WebGL based math sandbox",
-		"description" : "Consulting and contracting services for VR and AR applications, including executive strategy, b2b sales and partnerships, and full stack development. Our favorite b2b opportunities: hazardous environment simulations, athletic performance trainers, medical device training, corporate innovation sprints, corporate HR training, immersive patient therapy, and aptitude assessments.",
+		"position" : "Partner",
+		"description" : "Consulting for VR and AR applications, including project management, enterprise sales, experience design, and full stack development. ",
 		"responsibilities" : 
 		[
-#				"Business development",
-#				"Project management",
-#				"3D Interaction Design",
 		],
 		"images" : [
 			{ "img" : "radian_logo.png", "class" : "contain square", "link" : "http://radian.ai"},

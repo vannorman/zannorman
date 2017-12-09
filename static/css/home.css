@@ -98,17 +98,17 @@ body {
 	border:1px solid #c7c7c7;
 	border-bottom:0;
 	display:inline-block;
-	background-color: rgba(150,150,150,.6);
+	background-color: #dadada;
 	padding: 8px 0 5px 0;
 	font-size:18px;
 	
 	transition:all .3s;
-	-webkit-border-top-left-radius: 18px;
-	-webkit-border-top-right-radius: 18px;
-	-moz-border-radius-topleft: 18px;
-	-moz-border-radius-topright: 18px;
-	border-top-left-radius: 18px;
-	border-top-right-radius: 18px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 	position:relative;
 	z-index:101;
 }
