@@ -98,7 +98,6 @@ body {
 	border:1px solid #c7c7c7;
 	border-bottom:0;
 	display:inline-block;
-	background-color: #dadada;
 	padding: 8px 0 5px 0;
 	font-size:18px;
 	
@@ -111,14 +110,15 @@ body {
 	border-top-right-radius: 10px;
 	position:relative;
 	z-index:101;
+	color:#ccc;
+	border-bottom:1px solid white;
 }
 
 #tabs > ul > .selected {
-	background-color:white;
+	color:black;
 }
 
 #tabs > ul > li:hover {
-	background-color:white;
 	cursor:pointer;	
 }
 
