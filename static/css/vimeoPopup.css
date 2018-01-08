@@ -27,3 +27,14 @@
 	height:27px;
 	padding-top:2px;
 }
+
+.videoPlayIcon {
+    background-image:url('/static/img/play_orig.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    width:65px; height: 65px;
+    position:absolute;
+    top:-80px;
+    left:45px;
+}
+

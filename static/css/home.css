@@ -258,17 +258,6 @@ body {
 	background-color:rgba(0,0,0,0.15);
 }
 
-.videoPlayIcon {
-	background-image:url('/static/img/play_orig.png');
-	background-size:cover;
-	background-repeat:no-repeat;
-	width:65px; height: 65px;
-	position:absolute;	
-	top:-80px;
-	left:45px;
-}
-
-
 .roles {
 	margin-top:20px;
 
