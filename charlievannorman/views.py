@@ -260,6 +260,7 @@ def home(request):
 		{ "name" : "facebook.com/zannorman", "link" : "https://www.facebook.com/zannorman" },
 		{ "name" : "twitter.com/@supermathworld", "link" : "https://twitter.com/@supermathworld" },
 		{ "name" : "angel.co/supermathworld", "link" : "https://angel.co/supermathworld" },
+		{ "name" : "soundcloud.com/zannorman", "link" : "https://soundcloud.com/zannorman" },
 	]
 
 	return renderWithNav(request,'home.html', obj)
