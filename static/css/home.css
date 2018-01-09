@@ -120,6 +120,7 @@ body {
 
 #tabs > ul > li:hover {
 	cursor:pointer;	
+	color: #333;
 }
 
 #tabsContainer {
