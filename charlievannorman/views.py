@@ -30,8 +30,10 @@ def file_a(request):
 def file_b(request):
 	return HttpResponse("v9b5S4UbuLtvh_PwuhqjfOUnVfiulJSmFCYkNHtD6mA.myqbUoOfbuYMTb3HuxVonYYuwHgoAV2835bCeWTwqkY")
 
-def blog(request):
-	return renderWithNav(request,'blog.html')
+def blog(request, blog='123'):
+
+	obj = {}
+	return renderWithNav(request,'blogbase.html',obj)
 
 def home(request):
 	obj = {}
