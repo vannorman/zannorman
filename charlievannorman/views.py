@@ -30,21 +30,12 @@ def file_a(request):
 def file_b(request):
 	return HttpResponse("v9b5S4UbuLtvh_PwuhqjfOUnVfiulJSmFCYkNHtD6mA.myqbUoOfbuYMTb3HuxVonYYuwHgoAV2835bCeWTwqkY")
 
+def blog(request):
+	return renderWithNav(request,'blog.html')
+
 def home(request):
 	obj = {}
 	obj['developer'] = []
-#	obj['developer'].append({
-#		"title" : "Jet ZT",
-#		"link" : "http://tiny.jetzt",
-#		"year" : "2017",
-##		"subtitle" : "A prototype of a 3D flying game with missiles",
-#		"description" : "A prototype of a 3D flying game. Press Shift to move forwards, and use the mouse to navigate and fire. This one-level demo consists of a ship, cannon and missile capabilities, and moving targets. You can crash on the ",
-#		"images" : [	
-#			{"video" : { "source": "https://player.vimeo.com/video/230824116", "image" : "" }},
-#			{"img":"archer2.png"},
-#			{"img":"archer1.png"}
-#		],	
-#	})
 	obj['developer'].append({
 		"title" : "Village Builder",
 		"link" : "",
