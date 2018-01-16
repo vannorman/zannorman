@@ -11,6 +11,7 @@ $(document).ready(function(){
 });
 
 function ShowTab(i){
+//	console.log('showtab '+i);
 	$('.tabButton').each(function(){
 		if ($(this).index() == i){
 			$(this).addClass('selected');
@@ -19,15 +20,19 @@ function ShowTab(i){
 			$(this).removeClass('selected');
 		}
 	});
+	var index = 0;
 	$('.tab').each(function(){
-		if ($(this).index() == i){
-			console.log('fadein '+i);
+//		console.log('tabeach:'+$(this).className+", index;"+$(this).index()+", i;"+i);
+//		if ($(this).index() == i){
+		if (index == i){
+//			console.log('fadein '+i);
 			window.history.pushState("object or string", "Charlie Van Norman", "#"+i); //+$(this).attr('id'));
 			$(this).fadeIn();
 		} else {
-			console.log('fadeout '+i);
+//			console.log('fadeout '+i);
 			$(this).fadeOut();
 		}
+		index ++;
 	});
 
 }
