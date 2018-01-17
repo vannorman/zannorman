@@ -23,9 +23,9 @@
 <body>
 
 
-<div id="imageOverlay">
-	<div class="currentImage"></div>
-</div>
+	<div id="imageOverlay">
+		<div class="currentImage"></div>
+	</div>
 
 
 
@@ -49,26 +49,13 @@
 			VR / AR evangelist
 			<br/>Experience designer
 			<br/>Full stack developer
-<!--			Startup founder, 3D experience designer, Project manager, Full stack developer, Deep learning apprentice-->
-<!--			<ul style="list-style-type:none">-->
-<!--
-			<ul style="padding:0;margin:0;list-style-type:none;">
-				<li style="list-style-type:none;font-weight:600;text-decoration:underline;">By the year 2030:</li>
-				<li> XR is the norm for video games and interactive training apps </li>
-				<li> Tiny studios will have automated, ML powered asset pipelines </li>
-				<li> The tech of 2017 HMUs is realized through contact lenses </li>
-			</ul>
--->
-			<!-- Virtual, augmented, and mixed reality is the future of visual interaction. -->
 
 		</div>
-		</div>
+	</div>
 	<div id="tabs">
 		<ul>
-			<li class="tabButton selected">Startups</li>
-			<li class="tabButton">Projects </li>
-<!--			<li class="tabButton">Simulator </li>-->
-			<li class="tabButton">Contact </li>
+			<li class="tabButton selected">Works</li>
+			<li class="tabButton">Personal </li>
 			<li class="tabButton">Resume </li>
 		</ul>
 		<div id="tabsContainer">
@@ -78,7 +65,7 @@
 
 			<div id="tabFounder" class='tab'>
 				<ul>
-					{% for item in startups %}
+					{% for item in works %}
 						<li class='item'>
 							<div class="top1">
 								<div class='title'><a href={{item.link}} target="_blank"> {{ item.title }} </a></div>
@@ -130,80 +117,26 @@
 					{% endfor %}
 				</ul>
 			</div>
-			<div id="tabDeveloper" class='tab'>
-				<ul>
-					{% for item in developer %}
-						<li class='item'>
-							<div class="top1">
-								<div class='title'><a href={{item.link}} target="_blank"> {{ item.title }} </a></div>
-								<div class='subtitle'> {{ item.subtitle }}	</div>
-							</div>
-							<div class="top2">
-								<div class="year">{{item.year}}</div>
-								<div class="position">{{item.position}}</div>
-								
-							</div>
-							<div class="description">
-								{{ item.description|safe }}
-							</div>
-							<div class="responsibilities">	
-								<div class="head">
-<!--									My responsibilities: -->
-								</div>
-								<ul>
-									{% for d in item.responsibilities %}
-										<li> {{ d }} </li>
-									{% endfor %}
-								</ul>
-							</div>
-							<ul class='imageList'>
-							
-
-							{% for image in item.images %}
-								<li>
-									{% if image.video %}
-									
-									<a href=javascript:void(0) onclick=javascript:VIMEO_OVERLAY.Show('{{image.video.source}}'); target='_blank' name='{{image.video.img }}'>
-										<div class='img'  style='background-image:url("/static/img/{{ image.video.img }}");' ></div>
-										<div class='videoPlayIcon'></div>
-										<div class='imageHover {{image.class}}'></div>
-									</a>
-									{% else %}
-										{% if image.link %} 
-											<a href='{{image.link}}' target='_blank' name='{{image.img}}'>
-										{% else %}
-											<a href=javascript:void(0) onclick=javascript:IMAGE_VIEWER.Show(this); target='_blank' name='{{image.img}}'> 
-										{% endif %}
-										<div class="img {{image.class}}" style='background-image:url("/static/img/{{ image.img }}");' ></div>
-										<div class='imageHover {{image.class}}'></div>
-									</a>
-									{% endif %}
-									
-								</li>
-							{% endfor %}
-							</ul>
-						</li>
-					{% endfor %}
-				</ul>
-			</div>
-		<div id="tabContact" class='tab'>
-			<div class="cont" style="margin:0 auto; width:700px;position:relative;padding-top:30px;">
-				<ul style="list-style-type:none;width:240px;margin:0 auto;padding:0;position:relative;">
-					{% for item in social %} 
-						<li> <a style="color:blue;" href="{{item.link}}" target="_blank" >{{ item.name }}</a></li>
-					{% endfor %}
-					<li> <br /><a style='color:blue' href='mailto:hello@charlievannorman.com?subject=Hello!' target="_blank">hello@charlievannorman.com </a></li>
-					<li> <a href="/blog/">Blog </li>
-				</ul>
-			</div>
-		</div>
-
-		<div id="tabResume" class='tab'>
-			<div class="cont" style="margin:0 auto;width:700px; text-align:center;padding-top:30px;font-size:1.4em;overflow:visible;height:950px;">
-				<a target="_blank" href="/static/img/resume.pdf" style='color:blue'>(PDF download) Resume</a>
-				<object width="100%" height="100%" style='overflow:visible;min-height:101%;' data="/static/img/resume.pdf"></object>
+			<div id="tabContact" class='tab'>
+				<div class="cont" style="margin:0 auto; width:700px;position:relative;padding-top:30px;">
+					<ul style="list-style-type:none;width:240px;margin:0 auto;padding:0;position:relative;">
+						<li> <a style='font-size:1.3em; color:blue' href="/blog/">zannorman.com/VR Blog </li>
+						<li><br /></li>
+						{% for item in social %} 
+							<li> <a style="color:blue;" href="{{item.link}}" target="_blank" >{{ item.name }}</a></li>
+						{% endfor %}
+						<li> <br /><a style='color:blue' href='mailto:charlie@zannorman.com?subject=Hello!' target="_blank">charlie@zannorman.com </a></li>
+					</ul>
+				</div>
 			</div>
 
+			<div id="tabResume" class='tab'>
+				<div class="cont" style="margin:0 auto;width:700px; text-align:center;padding-top:30px;font-size:1.4em;overflow:visible;height:950px;">
+					<a target="_blank" href="/static/img/resume.pdf" style='color:blue'>(PDF download) Resume</a>
+					<object width="100%" height="100%" style='overflow:visible;min-height:101%;' data="/static/img/resume.pdf"></object>
+				</div>
+
+			</div>
 		</div>
 
 	</div>
@@ -215,31 +148,3 @@
 
 
 
-
-
-<!--			<div id="tabAbout" class='tab'>
-			
-				<p>
-					How I add value:
-					<ul>
-						<li> Project management </li>
-						<li> Dev tools & automation </li>
-						<li> 3D experience design </li>
-						<li> Full stack development </li>
-						<li> Sales & strategic partnerships </li>
-					</ul>
-				</p>
-				<p> Hobbies: 
-					<ul>
-						<li> Deep Learning </li>
-						<li> Playing music (guitar, piano, drums) </li>
-						<li> Playing Go</li>
-						<li> Climbing & Bouldering </li>
-						<li> Quantum physics, astrophysics, consciousness </li>
-					</ul>
-				</p>
-						
-			
-
-			</div>
--->

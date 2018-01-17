@@ -30,41 +30,29 @@ def file_a(request):
 def file_b(request):
 	return HttpResponse("v9b5S4UbuLtvh_PwuhqjfOUnVfiulJSmFCYkNHtD6mA.myqbUoOfbuYMTb3HuxVonYYuwHgoAV2835bCeWTwqkY")
 
-def blog(request, blog='123'):
 
-	obj = {}
-	return renderWithNav(request,'blogbase.html',obj)
+
+
+def blog_base(request):
+	return blog(request,None)
+
+def blog(request,blog):
+	if blog is None:
+		obj = {}
+		obj['blogs'] = []
+		obj['blogs'].append({
+			"url":"while-vr-for-consumer-lags-corporate-training-booms.html",
+			"title":"While VR for consumers lags, Corporate Training booms",
+			"date":"Jan 14, 2018"
+		})	
+		return renderWithNav(request,"blogbase.html",obj)
+	else:
+		return renderWithNav(request,"blog/"+blog)
 
 def home(request):
 	obj = {}
-	obj['developer'] = []
-	obj['developer'].append({
-		"title" : "Village Builder",
-		"link" : "",
-		"year" : "2017",
-		"subtitle" : "",
-		"description" : "A LightLodges production for communal coherence, village building and sustainable communities. Explore a virtual village filled with 360 videos and stories about real cities. Precursor to a live Mixed Reality gameshow coming 2018. I'm helping manage and develop the VR video game.",
-		"images" : [	
-			{"video" : { "source": "https://player.vimeo.com/video/246606943", "image" : "vb1.png" }},
-			{"img":"vb2.png"},
-			{"img":"vb3.png"},
-			{"img":"vb4.png"},
-		],	
-	})
-	obj['developer'].append({
-		"title" : "Humon / SpaceVR",
-		"link" : "",
-		"year" : "2017",
-		"subtitle" : "",
-		"description" : "Humon AI Company is making robots that will augment human tasks. Robots are controlled using human inputs in Virtual Reality, and can be trained on the data gathered by human inputs (using Vive controllers). I'm helping them make the Unity VR experience for robot control.",
-		"images" : [	
-#			{"video" : { "source": "https://player.vimeo.com/video/246606943", "image" : "vb1.png" }},
-#			{"img":"vb2.png"},
-#			{"img":"vb3.png"},
-#			{"img":"vb4.png"},
-		],	
-	})
-	obj['developer'].append({
+	obj['works'] = []
+	obj['works'].append({
 		"title" : "Space Frog",
 		"link" : "",
 		"year" : "2017",
@@ -77,42 +65,33 @@ def home(request):
 			{"img":"sf4.png"},
 		],	
 	})
-	obj['developer'].append({
-		"title" : "Magic Hands VR",
+	obj['works'].append({
+		"title" : "Village Builder",
 		"link" : "",
 		"year" : "2017",
-		"subtitle" : "An action game for Vive/Oculus + LeapMotion",
-		"description" : "Use your hands to cast spells and open portals to other worlds.",
+		"subtitle" : "",
+		"description" : "A LightLodges production for communal coherence, village building and sustainable communities. Explore a virtual village filled with 360 videos and stories about real cities. Precursor to a live Mixed Reality gameshow coming 2018. I'm helping manage and develop the VR video game.",
 		"images" : [	
-			{"video" : { "source": "https://player.vimeo.com/video/241614660", "image" : "" }},
-			{"img":"magichands1.png"},
-			{"img":"magichands2.png"}
+			{"video" : { "source": "https://player.vimeo.com/video/246606943", "image" : "vb1.png" }},
+			{"img":"vb2.png"},
+			{"img":"vb3.png"},
+			{"img":"vb4.png"},
 		],	
 	})
-	obj['developer'].append({
-		"title" : "Space Archer VR",
+	obj['works'].append({
+		"title" : "Humon / SpaceVR",
 		"link" : "",
 		"year" : "2017",
-		"subtitle" : "An action game for Vive/Oculus",
-		"description" : "Fly around in 3D space and shoot drones and space-men with your bow and arrow.",
+		"subtitle" : "",
+		"description" : "Humon AI Company is making robots that will augment human tasks. Robots are controlled using human inputs in Virtual Reality, and can be trained on the data gathered by human inputs (using Vive controllers). I'm helping them make the Unity VR experience for robot control.",
 		"images" : [	
-			{"video" : { "source": "https://player.vimeo.com/video/230824116", "image" : "" }},
-			{"img":"archer2.png"},
-			{"img":"archer1.png"}
+#			{"video" : { "source": "https://player.vimeo.com/video/246606943", "image" : "vb1.png" }},
+#			{"img":"vb2.png"},
+#			{"img":"vb3.png"},
+#			{"img":"vb4.png"},
 		],	
 	})
-	obj['developer'].append({
-		"title" : "Fitness Cube VR",
-		"link" : "",
-		"year" : "2017",
-		"subtitle" : "An exercise game for Vive/Oculus",
-		"description" : "Cubes fly at you, and you smash them with your fists! Duck and dodge to prevent losing health.",
-		"images" : [
-			{"video" : { "source": "https://player.vimeo.com/video/230823053", "img" : "fitness2.png" }},
-			{"img":"fitness1.png"},
-		],	
-	})
-	obj['developer'].append({
+	obj['works'].append({
 		"title" : "Coffee Command ARKit",
 		"link" : "",
 		"year" : "2017",
@@ -124,7 +103,42 @@ def home(request):
 			{"img":"coffeecommand3.png"},
 		],	
 	})
-	obj['developer'].append({
+	obj['works'].append({
+		"title" : "Magic Hands VR",
+		"link" : "",
+		"year" : "2017",
+		"subtitle" : "An action game for Vive/Oculus + LeapMotion",
+		"description" : "Use your hands to cast spells and open portals to other worlds.",
+		"images" : [	
+			{"video" : { "source": "https://player.vimeo.com/video/241614660", "image" : "" }},
+			{"img":"magichands1.png"},
+			{"img":"magichands2.png"}
+		],	
+	})
+	obj['works'].append({
+		"title" : "Space Archer VR",
+		"link" : "",
+		"year" : "2017",
+		"subtitle" : "An action game for Vive/Oculus",
+		"description" : "Fly around in 3D space and shoot drones and space-men with your bow and arrow.",
+		"images" : [	
+			{"video" : { "source": "https://player.vimeo.com/video/230824116", "image" : "" }},
+			{"img":"archer2.png"},
+			{"img":"archer1.png"}
+		],	
+	})
+	obj['works'].append({
+		"title" : "Fitness Cube VR",
+		"link" : "",
+		"year" : "2017",
+		"subtitle" : "An exercise game for Vive/Oculus",
+		"description" : "Cubes fly at you, and you smash them with your fists! Duck and dodge to prevent losing health.",
+		"images" : [
+			{"video" : { "source": "https://player.vimeo.com/video/230823053", "img" : "fitness2.png" }},
+			{"img":"fitness1.png"},
+		],	
+	})
+	obj['works'].append({
 		"title" : "Mouse Brain Explorer VR",
 		"link" : "https://3scan.com",
 		"year" : "2015",
@@ -136,26 +150,25 @@ def home(request):
 			
 		}],	
 	})	
-	obj['developer'].append({
+	obj['works'].append({
 		"title" : "Ring Flight",
 		"link" : "",
 		"year" : "2012",
 		"position" : "Hackathon developer",
 		"subtitle" : "Fly through rings",
 		"description" : "Made at a Kinect hackathon in 2012, this was my first experience integrating external hardware to a Unity game and capturing motion data as player input. In this game you fly through rings of different colors by tilting your body in the direction you wish to steer (lean forwards and backwards for pitch, left and right for yaw)",
-		"images" : [{
+		"images" : [
 			
-		}],	
+		],	
 	})	
 
 
 	
-	obj['startups'] = []
-	obj['startups'].append({
-		"title" : "Radian Consulting",
+	obj['works'].append({
+		"title" : "Radian",
 		"link" : "http://radian.ai",
 		"year" : "2017",
-		"position" : "Partner",
+		"position" : "Consultant",
 		"description" : "Consulting for VR and AR applications, including project management, enterprise sales, experience design, and full stack development. ",
 		"responsibilities" : 
 		[
@@ -164,7 +177,7 @@ def home(request):
 			{ "img" : "radian_logo.png", "class" : "contain square", "link" : "http://radian.ai"},
 		],	
 		})
-	obj['startups'].append({
+	obj['works'].append({
 		"title" : "Super Math World",
 		"link" : "https://supermathworld.com",
 		"year" : "2016 - 2017",
@@ -185,7 +198,7 @@ def home(request):
 #			{ "img" : "smw_3.jpg"}
 		],	
 		})
-	obj['startups'].append({
+	obj['works'].append({
 		"title" : "Mathbreakers",
 		"link" : "https://mathbreakers.com",
 		"year" : "2013 - 2015",
@@ -206,7 +219,7 @@ def home(request):
 		],	
 		})
 
-	obj['startups'].append({
+	obj['works'].append({
 		"title" : "Fractal Games",
 		"link" : "https://fractalgames.com (old)",
 		"year" : "2010 - 2011",
@@ -227,7 +240,7 @@ def home(request):
 			{"img" : "sls2.png"}
 			],	
 		})
-	obj['startups'].append({
+	obj['works'].append({
 		"title" : "Startup Grid (Hactus)",
 		"link" : "https://startupgrid.net",
 		"year" : "2012",
@@ -235,7 +248,7 @@ def home(request):
 		"description" : "One of my first solo projects, a search-and-filter website for exploring the startup landscape and searching for new opportunities. The startup data is scraped from CrunchBase. The original vision was to provide startups a go-to resource for funding, incubators, and other opportunities.",
 		"images" : [{"img":'startupgrid.png', "link":"http://startupgrid.net"}],	
 		})
-	obj['startups'].append({
+	obj['works'].append({
 		"title" : "Code Hero",
 		"link" : "https://codehero.org",
 		"year" : "2011",
@@ -251,7 +264,7 @@ def home(request):
 		{ "name" : "github.com/zannorman", "link" : "https://github.com/zannorman" },
 		{ "name" : "linkedin.com/in/zannorman", "link" : "https://www.linkedin.com/in/zannorman" },
 		{ "name" : "facebook.com/zannorman", "link" : "https://www.facebook.com/zannorman" },
-		{ "name" : "twitter.com/@supermathworld", "link" : "https://twitter.com/@supermathworld" },
+		{ "name" : "twitter.com/@zannorman", "link" : "https://twitter.com/@zannorman" },
 		{ "name" : "angel.co/supermathworld", "link" : "https://angel.co/supermathworld" },
 		{ "name" : "soundcloud.com/zannorman", "link" : "https://soundcloud.com/zannorman" },
 	]
