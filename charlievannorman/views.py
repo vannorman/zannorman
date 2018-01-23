@@ -54,12 +54,18 @@ def home(request):
 	obj['works'] = []
 	obj['works'].append({
 		"title" : "Space Frog",
+		"background" : "spacefrog_background.jpg",
+		"position" : "Developer/Designer",
 		"link" : "",
 		"year" : "2017",
-		"subtitle" : "An action game for Vive/Oculus + LeapMotion",
-		"description" : "Rescue the prince from the Space Crabs! You play as princess GeroGero (that is the sound a frog makes in Japanese), and you have to bust through waves of crabs to save your Prince. Punching missiles is the only mechanic. \"Sorry Princess, but your Prince is in another Mothership!\"",
+		"subtitle" : "A Virtual Reality fitness game in collaboration with Alex Goldman",
+		"description" : "A cardio workout guaranteed to make you sweat",
+		"video" : { 
+			"source": "https://player.vimeo.com/video/244438057", 
+			"image" : "sf1.png" 
+		},
 		"images" : [	
-			{"video" : { "source": "https://player.vimeo.com/video/244438057", "image" : "sf1.png" }},
+			{"img":"sf1.png"},
 			{"img":"sf2.png"},
 			{"img":"sf3.png"},
 			{"img":"sf4.png"},
@@ -67,12 +73,15 @@ def home(request):
 	})
 	obj['works'].append({
 		"title" : "Village Builder",
+		"position" : "Developer/Designer",
 		"link" : "",
 		"year" : "2017",
 		"subtitle" : "",
 		"description" : "A LightLodges production for communal coherence, village building and sustainable communities. Explore a virtual village filled with 360 videos and stories about real cities. Precursor to a live Mixed Reality gameshow coming 2018. I'm helping manage and develop the VR video game.",
+		"video" : { "source": "https://player.vimeo.com/video/246606943", "image" : "vb1.png" },
+	
 		"images" : [	
-			{"video" : { "source": "https://player.vimeo.com/video/246606943", "image" : "vb1.png" }},
+			{"img":"vb1.png"},
 			{"img":"vb2.png"},
 			{"img":"vb3.png"},
 			{"img":"vb4.png"},
@@ -80,6 +89,7 @@ def home(request):
 	})
 	obj['works'].append({
 		"title" : "Humon / SpaceVR",
+		"position" : "Developer",
 		"link" : "",
 		"year" : "2017",
 		"subtitle" : "",
@@ -93,6 +103,7 @@ def home(request):
 	})
 	obj['works'].append({
 		"title" : "Coffee Command ARKit",
+		"position" : "Developer/Designer",
 		"link" : "",
 		"year" : "2017",
 		"subtitle" : "A passive multiplayer base control game",
@@ -105,6 +116,7 @@ def home(request):
 	})
 	obj['works'].append({
 		"title" : "Magic Hands VR",
+		"position" : "Developer/Designer",
 		"link" : "",
 		"year" : "2017",
 		"subtitle" : "An action game for Vive/Oculus + LeapMotion",
@@ -117,6 +129,7 @@ def home(request):
 	})
 	obj['works'].append({
 		"title" : "Space Archer VR",
+		"position" : "Developer/Designer",
 		"link" : "",
 		"year" : "2017",
 		"subtitle" : "An action game for Vive/Oculus",
@@ -127,22 +140,22 @@ def home(request):
 			{"img":"archer1.png"}
 		],	
 	})
-	obj['works'].append({
-		"title" : "Fitness Cube VR",
-		"link" : "",
-		"year" : "2017",
-		"subtitle" : "An exercise game for Vive/Oculus",
-		"description" : "Cubes fly at you, and you smash them with your fists! Duck and dodge to prevent losing health.",
-		"images" : [
-			{"video" : { "source": "https://player.vimeo.com/video/230823053", "img" : "fitness2.png" }},
-			{"img":"fitness1.png"},
-		],	
-	})
+#	obj['works'].append({
+#		"title" : "Fitness Cube VR",
+#		"link" : "",
+#		"year" : "2017",
+#		"subtitle" : "An exercise game for Vive/Oculus",
+#		"description" : "Cubes fly at you, and you smash them with your fists! Duck and dodge to prevent losing health.",
+#		"images" : [
+#			{"video" : { "source": "https://player.vimeo.com/video/230823053", "img" : "fitness2.png" }},
+#			{"img":"fitness1.png"},
+#		],	
+#	})
 	obj['works'].append({
 		"title" : "Mouse Brain Explorer VR",
 		"link" : "https://3scan.com",
 		"year" : "2015",
-		"position" : "Contractor",
+		"position" : "Developer",
 		"subtitle" : "Fly through a real mouse brain",
 		"description" : "Using a cubic centimeter of a mouse brain imaged with 3Scan's equipment, I made a virtual reality tour through the vasculature and a mini-game to destroy blood clots. This was on exhibit during the Exploratorium's science week in 2015.",
 		"images" : [{
@@ -150,20 +163,17 @@ def home(request):
 			
 		}],	
 	})	
-	obj['works'].append({
-		"title" : "Ring Flight",
-		"link" : "",
-		"year" : "2012",
-		"position" : "Hackathon developer",
-		"subtitle" : "Fly through rings",
-		"description" : "Made at a Kinect hackathon in 2012, this was my first experience integrating external hardware to a Unity game and capturing motion data as player input. In this game you fly through rings of different colors by tilting your body in the direction you wish to steer (lean forwards and backwards for pitch, left and right for yaw)",
-		"images" : [
-			
-		],	
-	})	
-
-
-	
+#	obj['works'].append({
+#		"title" : "Ring Flight",
+#		"link" : "",
+#		"year" : "2012",
+#		"position" : "Developer",
+#		"subtitle" : "Fly through rings",
+#		"description" : "Made at a Kinect hackathon in 2012, this was my first experience integrating external hardware to a Unity game and capturing motion data as player input. In this game you fly through rings of different colors by tilting your body in the direction you wish to steer (lean forwards and backwards for pitch, left and right for yaw)",
+#		"images" : [
+#			
+#		],	
+#	})	
 	obj['works'].append({
 		"title" : "Radian",
 		"link" : "http://radian.ai",

@@ -9,12 +9,34 @@
 	display:none;
 }
 
+#imageOverlay .x {
+	position:absolute;
+	top:80px;
+	right:80px;
+	width:80px;
+	height:80px;
+	border:1px solid gray;
+	background-color:white;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	transition: .2s all;
+	font-size:3em;
+	font-weight:bold;
+	line-height:80px;
+	text-align:center;
+}
+#imageOverlay .x:hover {
+	
+	background-color:gray;
+	cursor:pointer;
+}
 #imageOverlay .currentImage {
 	position:relative;
 	margin: 0 auto;
-	width: 960px;
-	top: 20%;
-	height:60%;
+	width: 95%;
+	top: 2.5%;
+	height:95%;
 	background-size:contain;
 	background-position:center;
 	background-repeat:no-repeat;
