@@ -165,7 +165,7 @@ def home(request):
 	obj['works'].append({
 		"title" : "Mathbreakers",
 		"video" : { "source": "https://player.vimeo.com/video/73754523", "img" : "mb_1.jpg" },
-		"background" : "mb1.png",
+		"background" : "mb_1.png",
 		"link" : "https://mathbreakers.com",
 		"year" : "2013 - 2015",
 		"position" : "Co-Founder",
@@ -185,7 +185,7 @@ def home(request):
 		})
 	obj['works2'] = []
 	obj['works2'].append({
-		"title" : "Coffee Command",
+		"title" : "Coffee Command ARKit",
 		"position" : "Developer/Designer",
 		"link" : "",
 		"year" : "2017",
@@ -236,7 +236,7 @@ def home(request):
 #	})
 
 	obj['works2'].append({
-		"title" : "Radian",
+		"title" : "Radian.ai",
 		"link" : "http://radian.ai",
 		"year" : "2017",
 		"position" : "Consultant",
@@ -288,7 +288,32 @@ def home(request):
 		],	
 
 	})	
-
+	obj['works3'] = []
+	obj['works3'].append({
+		"title" : "Tech program director",
+		"description" : "I designed the curriculum for Synapse middle school in Menlo Park and taught kids how to program and make video games."
+	})	
+	obj['works3'].append({
+		"title" : "Sales",
+		"description" : "I was the top leasing agent during a lease-up of a 180 unit luxury apartment complex in SoMa, San Francisco."
+	})	
+	obj['works3'].append({
+		"title" : "Property Manager",
+		"description" : "I managed two residential apartment complexes for Alexander Forrest Investments, where I rehabilitated each property improving occupancy and collections from about 50% to 95%+ at each property over ~4 months."
+	})	
+	obj['works3'].append({
+		"title" : "Sales",
+		"description" : "I sold candies and soft drinks for Manidsa L.A. to food truck supply warehouses."
+	})	
+#	obj['works3'].append({
+#		"title" : "Real Estate Agent",
+#		"description" : "I was a licenesed agent in 2007 (right after the housing crash)."
+#	})	
+	obj['works3'].append({
+		"title" : "Teacher",
+		"description" : "I taught English in China during college."
+	})	
+						
 	obj['social'] = [
 		{ "name" : "github.com/zannorman", "link" : "https://github.com/zannorman" },
 		{ "name" : "linkedin.com/in/zannorman", "link" : "https://www.linkedin.com/in/zannorman" },

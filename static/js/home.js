@@ -12,15 +12,19 @@ $(document).ready(function(){
 		window.location.href='/blog/';
 	}); 
 	$('#top ul li:nth-child(2)').click(function(){
+		disableScroll();
 		$('#tabContact').fadeIn();
 	});
 	$('#top ul li:nth-child(3)').click(function(){
+		disableScroll();
 		$('#tabResume').fadeIn();
 	});
 	$('#tabContact').click(function(){
+		enableScroll();
 		$('#tabContact').fadeOut();
 	});
 	$('#tabResume').click(function(){
+		enableScroll();
 		$('#tabResume').fadeOut();
 	});
 	
