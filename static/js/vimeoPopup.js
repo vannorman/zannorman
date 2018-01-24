@@ -26,7 +26,7 @@ var VIMEO_OVERLAY = {
 		console.log('showing');
 //		$('#vimeo_iframe').attr('src',src+"?api=1");	
 		$('#vimeoPopupContainer').show();
-		$('#vimeoPopup').html("<iframe id='vimeo_iframe' src='"+src+"?title=1&amp;byline=1&amp;portrait=1&amp;autoplay=true'; frameborder='0'></iframe>"); // re-init the html for autoplay
+		$('#vimeoPopup').html("<iframe id='vimeo_iframe' src='"+src+"?title=1&amp;byline=1&amp;portrait=1&amp;autoplay=true'; frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"); // re-init the html for autoplay
 		w = window.innerWidth * .65;
 		h = w * 540 / 960;
 		$('#vimeoPopup iframe').width(w).height(h); 

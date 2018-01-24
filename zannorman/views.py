@@ -19,7 +19,7 @@ from django.contrib.auth.decorators import login_required
 
 #import requests
 
-from charlievannorman.util import *
+from zannorman.util import *
 def simple_page(template):
 	def handler(request):
 		return renderWithNav(request, template)
@@ -55,29 +55,30 @@ def home(request):
 	obj['works'].append({
 		"title" : "Space Frog",
 		"background" : "spacefrog_background.jpg",
-		"position" : "Developer/Designer",
+		"position" : "Developer, Game Designer",
 		"link" : "",
 		"year" : "2017",
-		"subtitle" : "A Virtual Reality fitness game in collaboration with Alex Goldman",
-		"description" : "A cardio workout guaranteed to make you sweat",
+#		"subtitle" : "A Virtual Reality fitness game in collaboration with Alex Goldman",
+		"description" : "A fitness game in collaboration with Alex Goldman, guaranteed to make you sweat",
 		"video" : { 
 			"source": "https://player.vimeo.com/video/244438057", 
 			"image" : "sf1.png" 
 		},
 		"images" : [	
-			{"img":"sf1.png"},
-			{"img":"sf2.png"},
-			{"img":"sf3.png"},
-			{"img":"sf4.png"},
-		],	
+			{"img":"sf5.png"},
+			{"img":"sf6.png"},
+			{"img":"sf7.png"},
+			{"img":"sf8.png"},
+		],
 	})
 	obj['works'].append({
 		"title" : "Village Builder",
-		"position" : "Developer/Designer",
+		"background" : "vb1.png",
+		"position" : "Developer, Designer",
 		"link" : "",
 		"year" : "2017",
 		"subtitle" : "",
-		"description" : "A LightLodges production for communal coherence, village building and sustainable communities. Explore a virtual village filled with 360 videos and stories about real cities. Precursor to a live Mixed Reality gameshow coming 2018. I'm helping manage and develop the VR video game.",
+		"description" : "A LightLodges.com production for communal coherence, village building and sustainable communities. Precursor to a live Mixed Reality gameshow coming 2018", 
 		"video" : { "source": "https://player.vimeo.com/video/246606943", "image" : "vb1.png" },
 	
 		"images" : [	
@@ -88,13 +89,22 @@ def home(request):
 		],	
 	})
 	obj['works'].append({
-		"title" : "Humon / SpaceVR",
+		"title" : "Humon AI COMPANY",
+		"video" : { 
+			"source": "https://player.vimeo.com/video/250308773", 
+			"image" : "sf1.png" 
+		},
+		"background" : "hi3.png",
 		"position" : "Developer",
 		"link" : "",
 		"year" : "2017",
 		"subtitle" : "",
-		"description" : "Humon AI Company is making robots that will augment human tasks. Robots are controlled using human inputs in Virtual Reality, and can be trained on the data gathered by human inputs (using Vive controllers). I'm helping them make the Unity VR experience for robot control.",
+		"description" : "Robots are controlled using human inputs in Virtual Reality, and can be trained on the data gathered by human inputs (using Vive controllers)",
 		"images" : [	
+			{"img":"hi1.png"},
+			{"img":"hi2.png"},
+			{"img":"hi3.png"},
+			{"img":"hi4.png"},
 #			{"video" : { "source": "https://player.vimeo.com/video/246606943", "image" : "vb1.png" }},
 #			{"img":"vb2.png"},
 #			{"img":"vb3.png"},
@@ -102,7 +112,80 @@ def home(request):
 		],	
 	})
 	obj['works'].append({
-		"title" : "Coffee Command ARKit",
+		"title" : "Mouse Brain Explorer",
+		"background" : "mouse4.png",
+		"video" : { "source": "https://player.vimeo.com/video/117482417", "img" : "3scan_1.jpg" },
+		"link" : "https://3scan.com",
+		"year" : "2015",
+		"position" : "Developer",
+		"subtitle" : "Fly through a real mouse brain",
+		"description" : "Using a cubic centimeter of a mouse brain imaged with 3Scan's equipment, I made a virtual reality tour through the vasculature and a mini-game to destroy blood clots. This was on exhibit during the Exploratorium's science week in 2015.",
+		"images" : [
+			{"img":"mouse2.png"},
+			{"img":"mouse3.png"},
+			{"img":"mouse1.png"},
+			{"img":"mouse4.png"},
+			
+		],	
+	})	
+#	obj['works'].append({
+#		"title" : "Ring Flight",
+#		"link" : "",
+#		"year" : "2012",
+#		"position" : "Developer",
+#		"subtitle" : "Fly through rings",
+#		"description" : "Made at a Kinect hackathon in 2012, this was my first experience integrating external hardware to a Unity game and capturing motion data as player input. In this game you fly through rings of different colors by tilting your body in the direction you wish to steer (lean forwards and backwards for pitch, left and right for yaw)",
+#		"images" : [
+#			
+#		],	
+#	})	
+	obj['works'].append({
+
+		"title" : "Super Math World",
+		"video" : { "source": "https://player.vimeo.com/video/219464062", "img" : "smw_1.jpg" },
+		"background" : "smw_2.jpg",
+		"link" : "https://supermathworld.com",
+		"year" : "2016 - 2017",
+		"position" : "Founder, CTO",
+#		"subtitle" : "A WebGL based math sandbox",
+		"description" : "A math sandbox video game for grades 2 - 8 which allows users to edit, create, and share game content from directly inside the application, natively in a web browser.",
+		"responsibilities" : 
+		[
+				"Unity c# framework architecture",
+				"Game design & programming",
+				"Web backend (python, django, MySQL, AWS)",
+		],
+		"images" : [
+			{ "img" : "smw_1.jpg" },
+			{ "img" : "smw_3.jpg"},
+			{ "img" : "smw_4.jpg"},
+			{ "img" : "smw_3.jpg"}
+		],	
+		})
+	obj['works'].append({
+		"title" : "Mathbreakers",
+		"video" : { "source": "https://player.vimeo.com/video/73754523", "img" : "mb_1.jpg" },
+		"background" : "mb1.png",
+		"link" : "https://mathbreakers.com",
+		"year" : "2013 - 2015",
+		"position" : "Co-Founder",
+		"subtitle" : "A math puzzle platformer for grades 2 - 8",
+		"description" : "We partnered with some of the biggest names in math education, including Dan Meyer and Jo Boaler, to discover the intersection between 3-D action gaming and elementary mathematics. The result was a truly immersive, stress free math game that kids love to play.",
+		"responsibilities" : 
+		[
+			"Game design & programming",
+			"Strategic partnerships",
+		],
+		"images" : [
+			{ "img" : "mb_1.jpg"},
+			{ "img" : "mb_2.jpg"},
+			{ "img" : "mb_3.jpg"},
+			{ "img" : "mb_4.jpg"}
+		],	
+		})
+	obj['works2'] = []
+	obj['works2'].append({
+		"title" : "Coffee Command",
 		"position" : "Developer/Designer",
 		"link" : "",
 		"year" : "2017",
@@ -114,7 +197,7 @@ def home(request):
 			{"img":"coffeecommand3.png"},
 		],	
 	})
-	obj['works'].append({
+	obj['works2'].append({
 		"title" : "Magic Hands VR",
 		"position" : "Developer/Designer",
 		"link" : "",
@@ -127,7 +210,7 @@ def home(request):
 			{"img":"magichands2.png"}
 		],	
 	})
-	obj['works'].append({
+	obj['works2'].append({
 		"title" : "Space Archer VR",
 		"position" : "Developer/Designer",
 		"link" : "",
@@ -151,30 +234,8 @@ def home(request):
 #			{"img":"fitness1.png"},
 #		],	
 #	})
-	obj['works'].append({
-		"title" : "Mouse Brain Explorer VR",
-		"link" : "https://3scan.com",
-		"year" : "2015",
-		"position" : "Developer",
-		"subtitle" : "Fly through a real mouse brain",
-		"description" : "Using a cubic centimeter of a mouse brain imaged with 3Scan's equipment, I made a virtual reality tour through the vasculature and a mini-game to destroy blood clots. This was on exhibit during the Exploratorium's science week in 2015.",
-		"images" : [{
-			"video" : { "source": "https://player.vimeo.com/video/117482417", "img" : "3scan_1.jpg" }
-			
-		}],	
-	})	
-#	obj['works'].append({
-#		"title" : "Ring Flight",
-#		"link" : "",
-#		"year" : "2012",
-#		"position" : "Developer",
-#		"subtitle" : "Fly through rings",
-#		"description" : "Made at a Kinect hackathon in 2012, this was my first experience integrating external hardware to a Unity game and capturing motion data as player input. In this game you fly through rings of different colors by tilting your body in the direction you wish to steer (lean forwards and backwards for pitch, left and right for yaw)",
-#		"images" : [
-#			
-#		],	
-#	})	
-	obj['works'].append({
+
+	obj['works2'].append({
 		"title" : "Radian",
 		"link" : "http://radian.ai",
 		"year" : "2017",
@@ -186,50 +247,8 @@ def home(request):
 		"images" : [
 			{ "img" : "radian_logo.png", "class" : "contain square", "link" : "http://radian.ai"},
 		],	
-		})
-	obj['works'].append({
-		"title" : "Super Math World",
-		"link" : "https://supermathworld.com",
-		"year" : "2016 - 2017",
-		"position" : "Founder, CTO",
-#		"subtitle" : "A WebGL based math sandbox",
-		"description" : "A math sandbox video game for grades 2 - 8 which allows users to edit, create, and share game content from directly inside the application, natively in a web browser.",
-		"responsibilities" : 
-		[
-				"Unity c# framework architecture",
-				"Game design & programming",
-				"Web backend (python, django, MySQL, AWS)",
-		],
-		"images" : [
-			{ "img" : "smw.png", "class" : "contain", "link" : "Https://supermathworld.com" },
-			{ "video" : { "source": "https://player.vimeo.com/video/219464062", "img" : "smw_1.jpg" }},
-			{ "img" : "smw_2.jpg"},
-			{ "img" : "smw_4.jpg"},
-#			{ "img" : "smw_3.jpg"}
-		],	
-		})
-	obj['works'].append({
-		"title" : "Mathbreakers",
-		"link" : "https://mathbreakers.com",
-		"year" : "2013 - 2015",
-		"position" : "Co-Founder",
-		"subtitle" : "A math puzzle platformer for grades 2 - 8",
-		"description" : "We partnered with some of the biggest names in math education, including Dan Meyer and Jo Boaler, to discover the intersection between 3-D action gaming and elementary mathematics. The result was a truly immersive, stress free math game that kids love to play.",
-		"responsibilities" : 
-		[
-			"Game design & programming",
-			"Strategic partnerships",
-		],
-		"images" : [
-			{ "img" : "mb.png", "class" : "contain", "link" : "https://mathbreakers.com/" },
-			{ "video" : { "source": "https://player.vimeo.com/video/73754523", "img" : "mb_1.jpg" }},
-			{ "img" : "mb_2.jpg"},
-#			{ "img" : "mb_3.jpg"},
-			{ "img" : "mb_4.jpg"}
-		],	
-		})
-
-	obj['works'].append({
+	})
+	obj['works2'].append({
 		"title" : "Fractal Games",
 		"link" : "https://fractalgames.com (old)",
 		"year" : "2010 - 2011",
@@ -250,7 +269,7 @@ def home(request):
 			{"img" : "sls2.png"}
 			],	
 		})
-	obj['works'].append({
+	obj['works2'].append({
 		"title" : "Startup Grid (Hactus)",
 		"link" : "https://startupgrid.net",
 		"year" : "2012",
@@ -258,7 +277,7 @@ def home(request):
 		"description" : "One of my first solo projects, a search-and-filter website for exploring the startup landscape and searching for new opportunities. The startup data is scraped from CrunchBase. The original vision was to provide startups a go-to resource for funding, incubators, and other opportunities.",
 		"images" : [{"img":'startupgrid.png', "link":"http://startupgrid.net"}],	
 		})
-	obj['works'].append({
+	obj['works2'].append({
 		"title" : "Code Hero",
 		"link" : "https://codehero.org",
 		"year" : "2011",

@@ -8,6 +8,22 @@ $(document).ready(function(){
 	$('.tabButton').click(function(){
 		ShowTab($(this).index());
 	});
+	$('#top ul li:nth-child(1)').click(function(){
+		window.location.href='/blog/';
+	}); 
+	$('#top ul li:nth-child(2)').click(function(){
+		$('#tabContact').fadeIn();
+	});
+	$('#top ul li:nth-child(3)').click(function(){
+		$('#tabResume').fadeIn();
+	});
+	$('#tabContact').click(function(){
+		$('#tabContact').fadeOut();
+	});
+	$('#tabResume').click(function(){
+		$('#tabResume').fadeOut();
+	});
+	
 });
 
 function ShowTab(i){

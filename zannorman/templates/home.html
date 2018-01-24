@@ -4,11 +4,11 @@
 <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon_z.png" />		
 	<meta name="google-site-verification" content="KPrCTIkFg3RCIWPoYvQO3QBnFcEqKflrEQI_6ztrwzE" />
 	{% block styles %}
+		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 	
 		<link rel='stylesheet' href="/static/css/home2.css{{version}}" type='text/css'>
 		<link rel='stylesheet' href="/static/css/imageviewer.css{{version}}" type='text/css'>
 		<link rel='stylesheet' href="/static/css/vimeoPopup.css{{version}}" %} type='text/css'>
-
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,400,600,800" rel="stylesheet">
 	{% endblock %}
 
@@ -30,8 +30,8 @@
 
 
 
-	<div id="vimeoPopupContainer" style="">
-		<div id="vimeoPopup" style="">
+	<div id="vimeoPopupContainer" style="" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+		<div id="vimeoPopup" style="" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 			<iframe id="vimeo_iframe" src="https://player.vimeo.com/video/178361265" style="margin: 0 auto;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
 	</div>
@@ -39,6 +39,19 @@
 
 <div id="container">
 	<div id="top">
+		<div class="pic1"></div>
+		<div class="text">
+			<div class="title">Charlie Zannorman</div>
+			<div class="subtitle">VR Ninja <span id="ninja"></span>Full stack developer</div>
+		</div>	
+		<div class="links">
+			<ul>
+				<li>BLOG</li>
+				<li>CONTACT</li>
+				<li>RESUME</li>
+			</ul>
+		</div>
+		<!--
 		<div class='picContainer'>
 			<div class="pic"></div>
 		
@@ -47,11 +60,14 @@
 			 Charlie Zannorman
 		</div>
 		<div class='hello'> 
-			Virtual Reality Ninja - Full Stack Developer
-			<!--<br/>Experience designer
-			<br/>Full stack developer -->
+			Virtual Reality Ninja <span id="ninja"></span> Full Stack Developer
 
 		</div>
+		<ul>
+			<li>BLOG</li>
+			<li>CONTACT</li>
+		</ul>
+-->
 	</div>
 	<div id="content">
 		<div id="works">
@@ -63,16 +79,18 @@
 						<div class='content'>
 							<div class="top1">
 								<div class='title'><a href={{item.link}} target="_blank"> {{ item.title }} </a></div>
+<!--
 								<div class='subtitle'> {{ item.subtitle }}	</div>
-								<div class="description">{{ item.description|safe }}</div>
-								<div class="video">	
-										<a href=javascript:void(0) onclick=javascript:VIMEO_OVERLAY.Show('{{item.video.source}}'); target='_blank' name='{{image.video.img }}'>
-											<div class='img'  style='background-image:url("/static/img/{{ image.video.img }}");' ></div>
-											<div class='videoPlayIcon'></div>
-											<div class='imageHover {{image.class}}'></div>
-										</a>
+-->
+								<div class="description">
+									{{ item.description|safe }} 
+									&#8212; 
+									{{ item.position }}
 								</div>
-		
+								<div class="watchVideo2"><a href=javascript:void(0); onclick=javascript:VIMEO_OVERLAY.Show('{{item.video.source}}'); >Demo Video		&#9654;</a></div>	
+<!--
+									<div class="viewDetails2"><a href=javascript:void(0); >View details		&#9654;</a></div>	
+-->
 								</div>
 						
 						<div class="imageListContainer">
@@ -94,9 +112,9 @@
 			</ul>
 		</div>
 			<div id="tabContact" class='tab'>
-				<div class="cont" style="margin:0 auto; width:700px;position:relative;padding-top:30px;">
-					<ul style="list-style-type:none;width:240px;margin:0 auto;padding:0;position:relative;">
-						<li> <a style='font-size:1.3em; color:blue' href="/blog/">zannorman.com/VR Blog </li>
+				<div class="x">X</div>
+				<div class="cont">
+					<ul>
 						<li><br /></li>
 						{% for item in social %} 
 							<li> <a style="color:blue;" href="{{item.link}}" target="_blank" >{{ item.name }}</a></li>
@@ -107,6 +125,7 @@
 			</div>
 
 			<div id="tabResume" class='tab'>
+				<div class="x">X</div>
 				<div class="cont" style="margin:0 auto;width:700px; text-align:center;padding-top:30px;font-size:1.4em;overflow:visible;height:950px;">
 					<a target="_blank" href="/static/img/resume.pdf" style='color:blue'>(PDF download) Resume</a>
 					<object width="100%" height="100%" style='overflow:visible;min-height:101%;' data="/static/img/resume.pdf"></object>
@@ -115,6 +134,18 @@
 			</div>
 		</div>
 
+	</div>
+	<div id="works2" style="width:960px; margin:0 auto; padding:50px 0;">
+		<h1> Other works </h1>
+		<ul>
+			{% for item in works2 %}
+				<li>
+					<h3> {{ item.title }}	</h3>
+					{{ item.description }}
+
+				</li>
+			{% endfor %}
+		</ul>
 	</div>
 </div>
 </body>

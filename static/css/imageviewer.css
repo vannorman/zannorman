@@ -10,20 +10,21 @@
 }
 
 #imageOverlay .x {
+	font-family: 'Orbitron', sans-serif;
 	position:absolute;
-	top:80px;
-	right:80px;
+	top:0px;
+	right:0px;
 	width:80px;
 	height:80px;
 	border:1px solid gray;
-	background-color:white;
+	background-color:rgba(255,255,255,.5);
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	transition: .2s all;
 	font-size:3em;
 	font-weight:bold;
-	line-height:80px;
+	line-height:93px;
 	text-align:center;
 }
 #imageOverlay .x:hover {
