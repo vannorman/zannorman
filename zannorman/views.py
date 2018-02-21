@@ -40,10 +40,17 @@ def blog(request,blog):
 	if blog is None:
 		obj = {}
 		obj['blogs'] = []
-		obj['blogs'].append({
+		obj['blogs'].append(
+		{
 			"url":"while-vr-for-consumer-lags-corporate-training-booms.html",
 			"title":"While VR for consumers lags, Corporate Training booms",
 			"date":"Jan 14, 2018"
+		})
+		obj['blogs'].append(
+		{
+			"url":"these-vr-startups-are-rocking-the-medical-world.html",
+			"title":"[IN PROGRESS] These VR Startups are rocking the medical world",
+			"date":"Feb 6, 2018"
 		})	
 		return renderWithNav(request,"blogbase.html",obj)
 	else:
