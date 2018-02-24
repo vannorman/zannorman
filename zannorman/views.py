@@ -46,12 +46,12 @@ def blog(request,blog):
 			"title":"While VR for consumers lags, Corporate Training booms",
 			"date":"Jan 14, 2018"
 		})
-		obj['blogs'].append(
-		{
-			"url":"these-vr-startups-are-rocking-the-medical-world.html",
-			"title":"[IN PROGRESS] These VR Startups are rocking the medical world",
-			"date":"Feb 6, 2018"
-		})	
+#		obj['blogs'].append(
+#		{
+#			"url":"these-vr-startups-are-rocking-the-medical-world.html",
+#			"title":"[IN PROGRESS] These VR Startups are rocking the medical world",
+#			"date":"Feb 6, 2018"
+#		})	
 		return renderWithNav(request,"blogbase.html",obj)
 	else:
 		return renderWithNav(request,"blog/"+blog)
