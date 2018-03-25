@@ -46,7 +46,12 @@ def blog(request,blog):
 			"title":"While VR for consumers lags, Corporate Training booms",
 			"date":"Jan 14, 2018"
 		})
-#		obj['blogs'].append(
+		obj['blogs'].append(
+		{
+			"url":"virtual-reality-bridges-gamer-gap.html",
+			"title":"Virtual Reality Bridges the Gamer Gap",
+			"date":"Mar 25, 2018"
+		})
 #		{
 #			"url":"these-vr-startups-are-rocking-the-medical-world.html",
 #			"title":"[IN PROGRESS] These VR Startups are rocking the medical world",
