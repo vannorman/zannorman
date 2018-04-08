@@ -59,6 +59,13 @@ def blog(request,blog):
 			"date":"Mar 27, 2018"
 		})
 
+		obj['blogs'].append(
+		{
+			"url":"sustainable-futures-are-collaborative-not-adversarial.html",
+			"title":"Sustainable Futures Are Collaborative Not Adversarial",
+			"date":"April 7, 2018"
+		})
+
 #		{
 #			"url":"these-vr-startups-are-rocking-the-medical-world.html",
 #			"title":"[IN PROGRESS] These VR Startups are rocking the medical world",
