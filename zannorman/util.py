@@ -9,8 +9,6 @@ import traceback
 import time
 import random
 import urllib
-import boto
-import vimeo
 
 from django.db.models.base import ObjectDoesNotExist
 from itertools import chain
