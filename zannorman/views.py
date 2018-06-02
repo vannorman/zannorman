@@ -79,10 +79,29 @@ def home(request):
 	obj = {}
 	obj['works'] = []
 	obj['works'].append({
+		"title" : "Molecular Machines",
+		"background" : "mm_background.jpg",
+		"position" : "Developer, Graphic Designer",
+		"link" : "https://foresight.org/nanotechnology-leading-to-molecular-machines/",
+		"year" : "2017",
+#		"subtitle" : "A Virtual Reality fitness game in collaboration with Alex Goldman",
+		"description" : "Based on projects designed by the Foresight Institute's May 2018 Molecular Machines workshop",
+		"video" : { 
+			"source": "https://player.vimeo.com/video/273109330", 
+			"image" : "mm_background.jpg" 
+		},
+		"images" : [	
+			{"img":"mm_1.jpg"},
+			{"img":"mm_2.jpg"},
+			{"img":"mm_3.jpg"},
+			{"img":"mm_4.jpg"},
+		],
+	})
+	obj['works'].append({
 		"title" : "Space Frog",
 		"background" : "spacefrog_background.jpg",
 		"position" : "Developer, Game Designer",
-		"link" : "",
+		"link" : "https://www.facebook.com/spacefrogvr/",
 		"year" : "2017",
 #		"subtitle" : "A Virtual Reality fitness game in collaboration with Alex Goldman",
 		"description" : "A fitness game in collaboration with Alex Goldman, guaranteed to make you sweat",

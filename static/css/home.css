@@ -30,7 +30,6 @@ body {
 	vertical-align:top;
 	display:block;
 	margin:0 auto;
-	top:10px;
 	height:120px;
 	width:920px;
 	text-align:left;
@@ -38,15 +37,16 @@ body {
 
 
 #top .pic1 {
+
 	display:inline-block;
-    border:1px solid gray;
     position:relative;
     margin: 0 auto;
-    top:5px;
+    top:15px;
     left:0;
     width:97px; 
     height:97px;
-    background-image:url('/static/img/bus-card-potrait-v4.png');
+/*    background-image:url('/static/img/bus-card-potrait-v4.png'); */
+/*    border:1px solid gray; */
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
@@ -87,8 +87,6 @@ body {
 	display:inline-block;
 	margin-left:40px
 	width:280px;
-	height: 97px;
-	margin-top:8px;
 }
 
 
@@ -101,38 +99,44 @@ body {
 	margin:0;
 	padding:0;
 
-    -webkit-border-radius: 300px;
-    -moz-border-radius: 300px;
-    border-radius: 300px; 
 	display:inline-block;
-	width:93px;
-	height:93px;
-	line-height:93px;
-	background-color:#aaf;
-	border: 1px solid gray;
+	width:120px;
+	height:120px;
+	line-height:120px;
+	background-color:#666;
 	font-size:18px;
+	font-weight:bold;
 	text-align:center;
-	margin-right:20px;
+	color:white;
+	margin-right:-17px;
 	transition: .2s all;
+	-webkit-clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
 }
-#top ul li:nth-child(1):hover {
+
+#top ul li:nth-child(3):hover,
+#top ul li:nth-child(2):hover, 
+#top ul li:hover  {
+	background-color: #888;
 	cursor:pointer;
-	background-color:#99d;
 }
+
+/* inner */
+#top ul li .inner {
+	-webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 1% 100%);
+	clip-path: polygon(10% 0, 100% 0, 100% 100%, 1% 100%);
+	overflow:hidden;
+}
+
+
 #top ul li:nth-child(2) {
-	background-color:#afa;
+	background-color:#555;
 }
-#top ul li:nth-child(2):hover {
-	cursor:pointer;
-	background-color:#9d9;
-}
+
 #top ul li:nth-child(3) {
-	background-color:#faa;
+	background-color:#444;
 }
-#top ul li:nth-child(3):hover {
-	cursor:pointer;
-	background-color:#d99;
-}
+
 #ninja {
 	background: url('/static/img/ninja.png') no-repeat center;
 	width:25px;
@@ -201,7 +205,7 @@ body {
 	padding:0;
 	width:calc(100% - 180px);
 	height:720px;
-	opacity: .4;
+	opacity: .7;
 	background-repeat:no-repeat;
 	background-size:cover;
 	pointer-events:none;
