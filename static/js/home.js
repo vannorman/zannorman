@@ -9,7 +9,7 @@ $(document).ready(function(){
 		ShowTab($(this).index());
 	});
 	$('#top ul li:nth-child(1)').click(function(){
-		window.location.href='/blog/';
+//		window.location.href='/blog/';
 	}); 
 	$('#top ul li:nth-child(2)').click(function(){
 		disableScroll();
