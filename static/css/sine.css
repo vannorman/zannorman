@@ -25,3 +25,10 @@
 .sine_span_second_2 {
   transform: translate(0, 60px) scale(1,2);
 }
+#canvas {
+    position: absolute;
+    top: 100;
+    right: 200;
+    width: 500px;
+    height: 70;
+}
