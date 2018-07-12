@@ -27,8 +27,8 @@
 }
 #canvas {
     position: absolute;
-    top: 100;
-    right: 200;
-    width: 500px;
-    height: 70;
+	top:0;
+    width:120%;
+	height: 100%;
+	pointer-events:none;
 }

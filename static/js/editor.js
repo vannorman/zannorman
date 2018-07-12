@@ -60,7 +60,7 @@ function checkKey(e) {
 		case 71: /* G */	rgb = 1;					break;		
 		case 66: /* B */	rgb = 2;					break;
 
-		case 49: /* 1 */	SetColor('rgb(0,125,0');	break;	
+		case 49: /* 1 */	SineCanvas.bubble(10,10);	break;	
 		case 50: /* 2 */	SetColor('rgb(0,145,0');	break;	
 		case 51: /* 3 */	SetColor('rgb(0,165,0');	break;	
 		case 52: /* 4 */	SetColor('rgb(0,185,0');	break;	
@@ -85,3 +85,9 @@ function SetColor(color){
 	$div.parent().css('background-color', color);
 	
 }
+
+// Obtient une interpolation linéaire entre 2 valeurs
+Math.lerp = function (value1, value2, amount) {
+	var delta = value2 - value1;
+	return value1 + delta * amount/60;
+};
